@@ -113,46 +113,39 @@ async function loadPage(path: string) {
   }
 }
 
-function navigateTo(path: string) {
-  // If the path maps to a different group than current, switch mode
-  const checkRoute = routes[path];
-  if (checkRoute && checkRoute.group !== currentMode) {
-    // Try to find equivalent page in the other mode
-    const crossMap: Record<string, string> = {
-      home: "home-mobile",
-      "home-mobile": "home",
-      "how-we-work": "how-we-work-mobile-1",
-      "how-we-work-mobile-1": "how-we-work",
-      "how-we-work-mobile-2": "how-we-work",
-      fees: "transparent-fees-mobile",
-      "transparent-fees-mobile": "fees",
-      contact: "contact-mobile",
-      "contact-mobile": "contact",
-      login: "login-mobile",
-      "login-mobile": "login",
-      "register-a-claim": "register-new-claim-mobile",
-      "register-new-claim-mobile": "register-a-claim",
-      "registration-confirmation": "registration-confirmation-mobile",
-      "registration-confirmation-mobile": "registration-confirmation",
-      dashboard: "dashboard-mobile",
-      "dashboard-mobile": "dashboard",
-      "my-claims": "my-claims-mobile",
-      "my-claims-mobile": "my-claims",
-      "profile-completion": "profile-completion-mobile",
-      "profile-completion-mobile": "profile-completion",
-      "admin-portal": "admin-portal-mobile",
-      "admin-portal-mobile": "admin-portal",
-      "all-claims-register": "all-claims-register-mobile",
-      "all-claims-register-mobile": "all-claims-register",
-      "fee-reconciliation": "fee-reconciliation-mobile",
-      "fee-reconciliation-mobile": "fee-reconciliation",
-    };
-    const equiv = crossMap[path];
-    if (equiv) {
-      path = equiv;
-    }
-  }
+const crossMap: Record<string, string> = {
+  home: "home-mobile",
+  "home-mobile": "home",
+  "how-we-work": "how-we-work-mobile-1",
+  "how-we-work-mobile-1": "how-we-work",
+  "how-we-work-mobile-2": "how-we-work",
+  fees: "transparent-fees-mobile",
+  "transparent-fees-mobile": "fees",
+  contact: "contact-mobile",
+  "contact-mobile": "contact",
+  login: "login-mobile",
+  "login-mobile": "login",
+  "register-a-claim": "register-new-claim-mobile",
+  "register-new-claim-mobile": "register-a-claim",
+  "register-new-claim": "register-new-claim-mobile",
+  "registration-confirmation": "registration-confirmation-mobile",
+  "registration-confirmation-mobile": "registration-confirmation",
+  dashboard: "dashboard-mobile",
+  "dashboard-mobile": "dashboard",
+  "client-dashboard": "dashboard-mobile",
+  "my-claims": "my-claims-mobile",
+  "my-claims-mobile": "my-claims",
+  "profile-completion": "profile-completion-mobile",
+  "profile-completion-mobile": "profile-completion",
+  "admin-portal": "admin-portal-mobile",
+  "admin-portal-mobile": "admin-portal",
+  "all-claims-register": "all-claims-register-mobile",
+  "all-claims-register-mobile": "all-claims-register",
+  "fee-reconciliation": "fee-reconciliation-mobile",
+  "fee-reconciliation-mobile": "fee-reconciliation",
+};
 
+function navigateTo(path: string) {
   currentPath = path;
   const route = resolveRoute(path);
   currentMode = route.group;
@@ -189,29 +182,19 @@ function updateFrameSize() {
 // Listen for navigation messages from iframe
 window.addEventListener("message", (e) => {
   if (e.data && e.data.type === "cs-navigate" && e.data.path) {
-    navigateTo(e.data.path);
+    const path = e.data.path;
+    // If the clicked link maps to a page in the other mode, cross over
+    if (crossMap[path]) {
+      navigateTo(crossMap[path]);
+    } else {
+      navigateTo(path);
+    }
   }
 });
 
 // Mode toggle buttons
 desktopBtn.addEventListener("click", () => {
   if (currentMode === "mobile") {
-    const crossMap: Record<string, string> = {
-      "home-mobile": "home",
-      "how-we-work-mobile-1": "how-we-work",
-      "how-we-work-mobile-2": "how-we-work",
-      "transparent-fees-mobile": "fees",
-      "contact-mobile": "contact",
-      "login-mobile": "login",
-      "register-new-claim-mobile": "register-a-claim",
-      "registration-confirmation-mobile": "registration-confirmation",
-      "dashboard-mobile": "dashboard",
-      "my-claims-mobile": "my-claims",
-      "profile-completion-mobile": "profile-completion",
-      "admin-portal-mobile": "admin-portal",
-      "all-claims-register-mobile": "all-claims-register",
-      "fee-reconciliation-mobile": "fee-reconciliation",
-    };
     const equiv = crossMap[currentPath] || "home";
     navigateTo(equiv);
   }
@@ -219,21 +202,6 @@ desktopBtn.addEventListener("click", () => {
 
 mobileBtn.addEventListener("click", () => {
   if (currentMode === "desktop") {
-    const crossMap: Record<string, string> = {
-      home: "home-mobile",
-      "how-we-work": "how-we-work-mobile-1",
-      fees: "transparent-fees-mobile",
-      contact: "contact-mobile",
-      login: "login-mobile",
-      "register-a-claim": "register-new-claim-mobile",
-      "registration-confirmation": "registration-confirmation-mobile",
-      dashboard: "dashboard-mobile",
-      "my-claims": "my-claims-mobile",
-      "profile-completion": "profile-completion-mobile",
-      "admin-portal": "admin-portal-mobile",
-      "all-claims-register": "all-claims-register-mobile",
-      "fee-reconciliation": "fee-reconciliation-mobile",
-    };
     const equiv = crossMap[currentPath] || "home-mobile";
     navigateTo(equiv);
   }
