@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-dim": "#cfdaf2", "surface": "#f9f9ff", "tertiary-fixed": "#ffdea0", "surface-tint": "#4b607b", "on-error-container": "#93000a", "primary": "#001125", "on-tertiary-fixed-variant": "#5a430f", "surface-variant": "#d8e3fb", "inverse-surface": "#263143", "on-primary": "#ffffff", "on-secondary-container": "#006f66", "on-secondary-fixed": "#00201d", "primary-fixed-dim": "#b3c8e8", "background": "#f9f9ff", "tertiary-fixed-dim": "#e3c282", "on-surface-variant": "#44474d", "on-background": "#111c2d", "surface-container-high": "#dee8ff", "outline": "#74777e", "on-primary-fixed-variant": "#344863", "on-secondary-fixed-variant": "#005049", "surface-container": "#e7eeff", "error": "#ba1a1a", "secondary": "#006a62", "secondary-fixed-dim": "#78d7cb", "secondary-fixed": "#95f3e7", "on-tertiary": "#ffffff", "tertiary": "#180f00", "tertiary-container": "#322300", "surface-container-low": "#f0f3ff", "on-primary-container": "#798eac", "on-secondary": "#ffffff", "surface-container-highest": "#d8e3fb", "surface-container-lowest": "#ffffff", "secondary-container": "#92f0e4", "primary-container": "#10263f", "inverse-primary": "#b3c8e8", "primary-fixed": "#d3e4ff", "error-container": "#ffdad6", "on-tertiary-container": "#a5894e", "outline-variant": "#c4c6ce", "surface-bright": "#f9f9ff", "on-tertiary-fixed": "#261a00", "inverse-on-surface": "#ecf1ff", "on-primary-fixed": "#051c35", "on-error": "#ffffff", "on-surface": "#111c2d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "3rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-2xl": "4rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "headline-md": ["Merriweather"], "headline-xl-mobile": ["Merriweather"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Merriweather"], "body-md": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"], "headline-lg": ["Merriweather"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Merriweather"], "display-lg-mobile": ["Merriweather"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Merriweather"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["22px", { lineHeight: "32px", fontWeight: "700" }], "headline-xl-mobile": ["26px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display-lg": ["48px", { lineHeight: "60px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-xl": ["18px", { lineHeight: "30px", fontWeight: "400" }], "headline-lg": ["28px", { lineHeight: "38px", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-xl": ["36px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "700" }], "display-lg-mobile": ["32px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Navigation Menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container active:bg-surface-container-high transition-colors" id="client-drawer-toggle"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[20px]">gavel</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">ClaimSathi</span></div><span class="font-label-sm text-[10px] text-outline leading-none">Every Rupee Matters</span></div></div><div class="flex items-center gap-space-xs"><a class="h-9 px-2.5 flex items-center gap-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm transition-transform active:scale-95" href="tel:18002524672"><span class="material-symbols-outlined text-[16px]">call</span><span class="hidden xs:inline">Helpline</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0" id="client-drawer"><div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" id="client-drawer-backdrop"></div><nav class="absolute top-0 left-0 bottom-0 w-5/6 max-w-xs bg-surface-container-lowest p-space-lg flex flex-col justify-between shadow-2xl transform -translate-x-full transition-transform duration-300" data-active-classes="bg-secondary/10 text-secondary font-semibold"><div class="space-y-space-md"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[24px]">balance</span><span class="font-headline-sm text-headline-sm text-primary">ClaimSathi</span></div><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container" id="client-drawer-close"><span class="material-symbols-outlined">close</span></button></div><div class="flex flex-col gap-1"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="client-home" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Home</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-secondary/10 text-secondary font-semibold" data-path="how-we-work" href="#"><span class="material-symbols-outlined text-[20px]">policy</span><span>How We Work</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="transparent-fees" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Transparent Fees</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="contact-enquiries" href="#"><span class="material-symbols-outlined text-[20px]">support_agent</span><span>Contact &amp; Enquiries</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="client-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Customer Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="my-claims" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span>My Claims</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="register-new-claim" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>Register New Claim</span></a></div></div><div class="pt-space-md border-t border-outline-variant/30 space-y-3"><a class="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-secondary text-on-secondary font-label-lg" href="tel:18002524672"><span class="material-symbols-outlined text-[18px]">phone_in_talk</span><span>1800-CLAIM-SATHI</span></a><p class="font-label-sm text-outline text-[11px] leading-relaxed text-center">Licensed Legal &amp; Insurance Advisors across PAN India.</p></div></nav></div><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-20">
+<!-- Hero / Editorial Framing -->
+<div class="px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Statutory Advisory Path</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight">
+      Our 4-Stage Statutory Legal Redressal Process
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+      Every Rupee Matters. We Take It Personally. Navigating unlawful rejections through codified IRDAI provisions and statutory ombudsman jurisprudence.
+    </p>
+<!-- Stat Strip Banner -->
+<div class="mt-space-xs grid grid-cols-2 gap-space-xs p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex flex-col p-space-xs bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Resolution Time</span>
+<span class="font-headline-sm text-headline-sm text-primary">30–60 Days</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Statutory Interest</span>
+<span class="font-headline-sm text-headline-sm text-secondary">Bank Rate + 2%</span>
+</div>
+</div>
+</div>
+<!-- Editorial Visual Hook -->
+<div class="px-gutter-mobile mb-space-lg">
+<div class="relative w-full h-44 rounded-xl overflow-hidden shadow-sm bg-primary-container">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="Close-up aesthetic shot of an Indian advocate desk with leather law journals, official legal dossier bound in red tape, IRDAI gazette notifications, and an engraved brass scales of justice in warm cinematic moody interior lighting with deep navy and gold tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSVrBBsAAtu1XqYXXs6xg7EZn-mZlGqkp_UENwtfFEq_-XAvJKD6zJ4hgI9BCaYqnq1MuRnEWk8xGWdxSySgL-u1ZPHTBsmeq_MbzYiK0OSoLdFf87EwSo8KLqBlRHFWPN8R7L4BLKmFJzjLdswzk9kJSsAuYeKcT9ywrbKBnCJus8mxD3QUL80tC4EJr5J6G7Ej7i49b5hsfJC7wUPhx-9qEB_SeFW7ykoXbtw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent flex flex-col justify-end p-space-md text-on-primary">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold tracking-wide uppercase">Legal Rigor</span>
+<p class="font-headline-sm text-headline-sm text-on-primary leading-snug">
+          Zero Compromise with Arbitrary Repudiation.
+        </p>
+</div>
+</div>
+</div>
+<!-- 4-Stage Vertical Mobile Timeline -->
+<div class="px-gutter-mobile flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">The Process Timeline</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container px-2.5 py-0.5 rounded-full font-medium">Stage-by-Stage</span>
+</div>
+<!-- Timeline Wrapper -->
+<div class="relative pl-6 flex flex-col gap-space-lg">
+<!-- Continuous Background Track Line -->
+<div class="absolute left-[11px] top-4 bottom-4 w-[2px] bg-surface-variant"></div>
+<!-- Phase 1 -->
+<div class="relative flex flex-col gap-space-xs">
+<!-- Node Marker -->
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="font-label-sm text-[11px] font-bold">1</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Phase 01</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px]">timer</span> 48 Hours
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+            Forensic Document Scrutiny &amp; Policy Audit
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Rapid evidentiary assessment of rejection letters against the original proposal form, policy wording, and medical histories.
+          </p>
+<div class="mt-space-xs p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-1.5">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">policy</span>
+<span class="font-body-sm text-body-sm text-on-surface">Cross-referenced against <strong>IRDAI Master Circular 2024</strong>.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface">Strict invocation of <strong>Section 45 (Incontestability Clause)</strong> for life claims over 3 years.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="relative flex flex-col gap-space-xs">
+<!-- Node Marker -->
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="font-label-sm text-[11px] font-bold">2</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Phase 02</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px]">event_repeat</span> 15-Day Limit
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+            Formal Grievance Memorandum to Insurer GRO
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Drafting an airtight, counsel-vetted representation submitted directly to the Principal Grievance Redressal Officer (GRO).
+          </p>
+<div class="mt-space-xs p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-1.5">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">balance</span>
+<span class="font-body-sm text-body-sm text-on-surface">Enforces mandatory countdown under <strong>Regulation 15(1) Protection of Policyholders' Interests</strong>.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">history_edu</span>
+<span class="font-body-sm text-body-sm text-on-surface">Submits clinical counter-affidavits refuting pre-existing condition exclusions.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="relative flex flex-col gap-space-xs">
+<!-- Node Marker -->
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="font-label-sm text-[11px] font-bold">3</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Phase 03</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px]">gavel</span> Territorial Bench
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+            Formal Ombudsman Petition &amp; Representation
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            If the insurer refuses rectification within 15 days, we escalate directly to the quasi-judicial Insurance Ombudsman forum.
+          </p>
+<div class="mt-space-xs p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-1.5">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">rule</span>
+<span class="font-body-sm text-body-sm text-on-surface">Filed strictly under <strong>Insurance Ombudsman Rules 14(1) &amp; 17</strong>.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">corporate_fare</span>
+<span class="font-body-sm text-body-sm text-on-surface">Complete evidence compilation for personal bench hearings across PAN India.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Phase 4 -->
+<div class="relative flex flex-col gap-space-xs">
+<!-- Node Marker -->
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="font-label-sm text-[11px] font-bold">4</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Phase 04</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-secondary-container bg-secondary-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px]">currency_rupee</span> Direct Credit
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+            Settlement Execution &amp; Direct Restitution
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Binding award compliance enforced on the insurer without intermediary friction. Every rupee is credited directly to you.
+          </p>
+<div class="mt-space-xs p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-1.5">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">account_balance</span>
+<span class="font-body-sm text-body-sm text-on-surface">100% direct insurer NEFT into your verified personal bank account.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">trending_up</span>
+<span class="font-body-sm text-body-sm text-on-surface">Mandatory <strong>8% statutory penal interest</strong> added for delays beyond 30 days.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Divider Spacer -->
+<div class="my-space-xl px-gutter-mobile">
+<div class="w-full h-px bg-surface-variant"></div>
+</div>
+<!-- Section: What Sets Us Apart -->
+<div class="px-gutter-mobile flex flex-col gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">The ClaimSathi Standard</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-1">What Sets Us Apart</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Built from the ground up to protect consumers from corporate asymmetry.
+      </p>
+</div>
+<!-- Feature Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-xs">Experienced Insurance Advocates</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Not call-center agents. Your grievance dossier is prepared by vetted advocates specializing exclusively in insurance disputes, ombudsman precedents, and High Court writ jurisprudence.
+      </p>
+<div class="mt-2 flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Over 4,200+ Claims Successfully Defended</span>
+</div>
+</div>
+<!-- Feature Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">price_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-xs">Zero Hidden Charges</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Absolute fee transparency. No surprise filing levies, no consultation surcharge, and no recurring billing. You pay our contingent advocacy fee strictly after money hits your bank.
+      </p>
+<div class="mt-2 flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">handshake</span>
+<span>Strict "No Recovery, No Advocacy Fee" Policy</span>
+</div>
+</div>
+<!-- Feature Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">shield_lock</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-xs">Escrow &amp; Retainer Safety</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        ClaimSathi never handles your settlement capital. Payouts arrive directly via RTGS/NEFT from the insurer's treasury to your registered account, preserving complete fiduciary safety.
+      </p>
+<div class="mt-2 flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Non-Custodial Legal Representation</span>
+</div>
+</div>
+</div>
+<!-- Divider Spacer -->
+<div class="my-space-xl px-gutter-mobile">
+<div class="w-full h-px bg-surface-variant"></div>
+</div>
+<!-- Section: Mobile Interactive FAQ Accordion -->
+<div class="px-gutter-mobile flex flex-col gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Got Questions?</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-1">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Clear answers on statutory jurisdiction, timelines, and rights.
+      </p>
+</div>
+<div class="flex flex-col gap-space-xs" id="faq-container">
+<!-- FAQ 1 (Open by default) -->
+<div class="faq-item bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-colors border border-transparent" data-expanded="true">
+<button aria-controls="faq-answer-1" aria-expanded="true" class="faq-toggle w-full p-space-md flex items-center justify-between text-left gap-3 focus:outline-none transition-colors select-none" id="faq-trigger-1" type="button">
+<span class="font-label-lg text-label-lg text-primary font-semibold">How long does the ombudsman resolution take?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-300 text-[20px] shrink-0 rotate-180">expand_more</span>
+</button>
+<div aria-labelledby="faq-trigger-1" class="faq-grid grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" id="faq-answer-1" style="grid-template-rows: 1fr;">
+<div class="overflow-hidden transition-opacity duration-300 opacity-100">
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md pt-0.5 border-t border-surface-variant/40 mt-1">
+            Typically 30 to 60 days following the mandatory 15-day Insurer GRO statutory notice period. Under Rule 17 of the Insurance Ombudsman Rules, awards must be executed within 30 days.
+          </div>
+</div>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-colors border border-transparent" data-expanded="false">
+<button aria-controls="faq-answer-2" aria-expanded="false" class="faq-toggle w-full p-space-md flex items-center justify-between text-left gap-3 focus:outline-none transition-colors select-none" id="faq-trigger-2" type="button">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Can my claim be rejected if the policy is over 3 years old?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-300 text-[20px] shrink-0">expand_more</span>
+</button>
+<div aria-labelledby="faq-trigger-2" class="faq-grid grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" id="faq-answer-2" style="grid-template-rows: 0fr;">
+<div class="overflow-hidden transition-opacity duration-300 opacity-0">
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md pt-0.5 border-t border-surface-variant/40 mt-1">
+            Under Section 45 of the Insurance Act (Incontestability Clause), no life or health policy can be repudiated for non-disclosure after 3 continuous years. Our advocates strictly enforce this protection.
+          </div>
+</div>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-colors border border-transparent" data-expanded="false">
+<button aria-controls="faq-answer-3" aria-expanded="false" class="faq-toggle w-full p-space-md flex items-center justify-between text-left gap-3 focus:outline-none transition-colors select-none" id="faq-trigger-3" type="button">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Do I need to visit any court or office personally?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-300 text-[20px] shrink-0">expand_more</span>
+</button>
+<div aria-labelledby="faq-trigger-3" class="faq-grid grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" id="faq-answer-3" style="grid-template-rows: 0fr;">
+<div class="overflow-hidden transition-opacity duration-300 opacity-0">
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md pt-0.5 border-t border-surface-variant/40 mt-1">
+            No. ClaimSathi manages all representations, paper filings, written briefs, and virtual/bench hearings on your behalf. All updates and submissions are tracked in your digital dossier.
+          </div>
+</div>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-colors border border-transparent" data-expanded="false">
+<button aria-controls="faq-answer-4" aria-expanded="false" class="faq-toggle w-full p-space-md flex items-center justify-between text-left gap-3 focus:outline-none transition-colors select-none" id="faq-trigger-4" type="button">
+<span class="font-label-lg text-label-lg text-primary font-semibold">What documents are needed to start the free review?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-300 text-[20px] shrink-0">expand_more</span>
+</button>
+<div aria-labelledby="faq-trigger-4" class="faq-grid grid transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]" id="faq-answer-4" style="grid-template-rows: 0fr;">
+<div class="overflow-hidden transition-opacity duration-300 opacity-0">
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md pt-0.5 border-t border-surface-variant/40 mt-1">
+            Simply upload your insurer repudiation/denial letter, policy schedule, and final hospital discharge summary or death certificate. Our forensic panel audits these within 48 hours at zero upfront cost.
+          </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom CTA & Trust Affirmation -->
+<div class="px-gutter-mobile mt-space-xl">
+<div class="bg-primary text-on-primary p-space-lg rounded-2xl shadow-xl flex flex-col gap-space-md text-center relative overflow-hidden">
+<!-- Ambient Backing Shape -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-secondary/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col items-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">balance</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary">
+          Restore What Is Rightfully Yours
+        </h3>
+<p class="font-body-md text-body-md text-primary-fixed-dim">
+          Don't accept an unfair claim rejection. Our senior insurance advocates scrutinize your case files without upfront legal fees.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<a class="h-12 w-full flex items-center justify-center gap-2 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg shadow-md active:scale-[0.98] transition-transform" data-path="register-new-claim" href="#">
+<span>Start Your Free Claim Scrutiny</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="h-12 w-full flex items-center justify-center gap-2 rounded-lg bg-surface-container-lowest/10 text-on-primary font-label-lg text-label-lg active:bg-surface-container-lowest/20 transition-colors" href="tel:18002524672">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">call</span>
+<span>Toll-Free Legal Desk: 1800-252-4672</span>
+</a>
+</div>
+<p class="font-label-sm text-[11px] text-primary-fixed-dim/70">
+        Confidential review • 100% Data encryption under Digital Personal Data Protection Act 2023.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  // Interactive accordion logic with smooth CSS grid transition
+  document.querySelectorAll('#faq-container .faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.faq-item');
+      const grid = item.querySelector('.faq-grid');
+      const inner = grid.querySelector('.overflow-hidden');
+      const icon = button.querySelector('.material-symbols-outlined');
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      if (isExpanded) {
+        // Collapse clicked item
+        button.setAttribute('aria-expanded', 'false');
+        item.setAttribute('data-expanded', 'false');
+        grid.style.gridTemplateRows = '0fr';
+        inner.classList.remove('opacity-100');
+        inner.classList.add('opacity-0');
+        if (icon) icon.classList.remove('rotate-180');
+      } else {
+        // Expand clicked item
+        button.setAttribute('aria-expanded', 'true');
+        item.setAttribute('data-expanded', 'true');
+        grid.style.gridTemplateRows = '1fr';
+        inner.classList.remove('opacity-0');
+        inner.classList.add('opacity-100');
+        if (icon) icon.classList.add('rotate-180');
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low px-gutter-mobile py-space-sm"><div class="max-w-md mx-auto text-center space-y-1"><p class="font-label-sm text-[11px] text-outline leading-tight">ClaimSathi Legal Advocacy Chambers • Regulated Advisory • Strict Non-Retainer Model</p><p class="font-label-sm text-[10px] text-outline/80 leading-tight pb-1">Disclaimer: ClaimSathi acts as an independent policyholder legal advocate. We are not an insurance company.</p></div></footer><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="client-home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-[11px]">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-claims" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[11px]">Claims</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-secondary hover:text-secondary transition-transform active:scale-95" data-path="register-new-claim" href="#"><span class="material-symbols-outlined text-[26px]">add_circle</span><span class="font-label-sm text-[11px]">File Claim</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="transparent-fees" href="#"><span class="material-symbols-outlined text-[22px]">verified</span><span class="font-label-sm text-[11px]">Fees</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="client-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-[11px]">Portal</span></a></div></nav><script>const drawer=document.getElementById('client-drawer');const toggle=document.getElementById('client-drawer-toggle');const close=document.getElementById('client-drawer-close');const backdrop=document.getElementById('client-drawer-backdrop');function openDrawer(){drawer.classList.remove('pointer-events-none','opacity-0');drawer.classList.add('opacity-100');drawer.querySelector('nav').classList.remove('-translate-x-full');}function closeDrawer(){drawer.classList.add('pointer-events-none','opacity-0');drawer.classList.remove('opacity-100');drawer.querySelector('nav').classList.add('-translate-x-full');}toggle?.addEventListener('click',openDrawer);close?.addEventListener('click',closeDrawer);backdrop?.addEventListener('click',closeDrawer);</script></body></html>

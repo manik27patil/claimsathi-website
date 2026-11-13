@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#10263f","surface-tint":"#4b607b","tertiary":"#180f00","inverse-primary":"#b3c8e8","secondary-fixed-dim":"#78d7cb","on-error-container":"#93000a","on-tertiary-fixed":"#261a00","on-primary-fixed":"#051c35","surface-dim":"#cfdaf2","on-tertiary":"#ffffff","tertiary-fixed":"#ffdea0","on-surface-variant":"#44474d","on-primary-fixed-variant":"#344863","outline":"#74777e","on-surface":"#111c2d","inverse-surface":"#263143","surface-variant":"#d8e3fb","on-secondary-fixed":"#00201d","secondary":"#006a62","on-tertiary-fixed-variant":"#5a430f","surface-container-high":"#dee8ff","outline-variant":"#c4c6ce","inverse-on-surface":"#ecf1ff","on-primary":"#ffffff","surface-bright":"#f9f9ff","on-secondary":"#ffffff","secondary-fixed":"#95f3e7","primary":"#001125","on-error":"#ffffff","surface-container-lowest":"#ffffff","surface-container":"#e7eeff","on-primary-container":"#798eac","on-tertiary-container":"#a5894e","error-container":"#ffdad6","tertiary-fixed-dim":"#e3c282","error":"#ba1a1a","on-background":"#111c2d","primary-fixed":"#d3e4ff","surface":"#f9f9ff","background":"#f9f9ff","secondary-container":"#92f0e4","tertiary-container":"#322300","on-secondary-container":"#006f66","on-secondary-fixed-variant":"#005049","surface-container-low":"#f0f3ff","primary-fixed-dim":"#b3c8e8","surface-container-highest":"#d8e3fb"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2.5rem","space-lg":"1.5rem","space-md":"1rem","space-xs":"0.25rem","space-2xl":"4rem","gutter":"1.5rem","margin-mobile":"1.25rem","space-sm":"0.5rem","margin":"3rem","gutter-mobile":"1rem"},"fontFamily":{"headline-xl-mobile":["Merriweather"],"headline-xl":["Merriweather"],"headline-md":["Merriweather"],"label-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Merriweather"],"label-md":["Plus Jakarta Sans"],"display-lg-mobile":["Merriweather"],"display-lg":["Merriweather"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Merriweather"]},"fontSize":{"headline-xl-mobile":["26px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"32px","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-xl":["18px",{"lineHeight":"30px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"38px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"42px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-lg":["48px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="w-full bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-secondary-fixed text-[24px]">verified_user</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">ClaimSathi</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Secure Access</span></div></div><div class="flex items-center gap-space-xs bg-tertiary-fixed/30 text-on-tertiary-fixed-variant px-space-md py-space-xs rounded-full shadow-sm"><span class="material-symbols-outlined text-[16px] text-tertiary">shield_lock</span><span class="font-label-sm text-label-sm tracking-wide font-semibold">Bank-Grade AES-256 Encryption | Zero Spam Policy</span></div></div></header><main class="w-full flex-1 flex items-center justify-center px-gutter py-space-2xl bg-background"><div class="flex flex-col w-full max-w-7xl mx-auto">
+<!-- Stepper Indicator -->
+<div class="w-full mb-space-xl">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<!-- Step 1: Completed -->
+<div class="flex items-center gap-space-sm flex-1">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Step 01 • Authenticated</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate">Google Identity Verified</span>
+</div>
+</div>
+<div class="hidden md:block w-12 h-[2px] bg-secondary-fixed shrink-0"></div>
+<!-- Step 2: Active -->
+<div class="flex items-center gap-space-sm flex-1">
+<div class="w-8 h-8 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center shrink-0 ring-4 ring-secondary-container/50">
+<span class="material-symbols-outlined text-[18px]">person_pin</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-widest">Step 02 • Current</span>
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+</div>
+<span class="font-label-lg text-label-lg text-primary font-semibold truncate">Policyholder Contact Details</span>
+</div>
+</div>
+<div class="hidden md:block w-12 h-[2px] bg-surface-variant shrink-0"></div>
+<!-- Step 3: Pending -->
+<div class="flex items-center gap-space-sm flex-1 opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Step 03 • Final</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate">Access Claims Dashboard</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Header Text Cluster -->
+<div class="mb-space-xl text-left">
+<div class="inline-flex items-center gap-space-xs bg-secondary-container/40 text-on-secondary-container px-space-sm py-1 rounded-full mb-space-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Immediate Onboarding &amp; Triage Setup</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight mb-space-xs">
+      Complete Your Policyholder Profile
+    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+      Provide your verified contact details so your dedicated claims advocate can reach you immediately for initial case triage, dossier preparation, and formal Insurance Ombudsman representation.
+    </p>
+</div>
+<!-- Main Grid: Form (7 cols) + Reassurance Sidebar (5 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT: Form Dossier Card (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-md p-space-lg md:p-space-xl flex flex-col gap-space-lg">
+<!-- Section 1: Pre-filled Google Identity -->
+<div>
+<div class="flex items-center justify-between pb-space-sm mb-space-md bg-surface-container-low/60 p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">lock_clock</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Authenticated Identity (Google OAuth 2.0)</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded">Immutable</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Full Legal Name</label>
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<span class="font-body-lg text-body-lg text-primary font-medium truncate">Rajesh Kumar Sharma</span>
+<div class="flex items-center gap-1 text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Registered Email</label>
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<span class="font-body-md text-body-md text-primary font-medium truncate">rajesh.k.sharma78@gmail.com</span>
+<div class="flex items-center gap-1 text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</div>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+          Imported safely via single sign-on. This anchors your legal arbitration account.
+        </p>
+</div>
+<div class="h-[1px] bg-surface-container-high w-full"></div>
+<!-- Section 2: Contact & Jurisdictional Details -->
+<form class="flex flex-col gap-space-lg" id="profile-form" onsubmit="event.preventDefault();">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-1">
+            Communication &amp; Ombudsman Jurisdiction
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            All fields marked with an asterisk (<span class="text-error font-bold">*</span>) are mandatory under IRDAI claims dispute regulations.
+          </p>
+</div>
+<!-- Phone & Country Code Row -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="mobile-number">
+<span>Primary Mobile Number <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Triage SMS &amp; WhatsApp Enabled</span>
+</label>
+<div class="flex items-center gap-space-xs">
+<!-- Country Code Picker -->
+<div class="relative w-36 shrink-0">
+<div class="flex items-center bg-surface-container-low rounded-lg px-3 py-2.5 shadow-sm">
+<span class="text-[18px] mr-2">🇮🇳</span>
+<span class="font-body-lg text-body-lg text-primary font-medium">+91</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant ml-auto">expand_more</span>
+</div>
+</div>
+<!-- Number Input -->
+<div class="relative flex-1">
+<input class="w-full bg-surface-container-low focus:bg-surface text-primary font-body-lg text-body-lg rounded-lg px-space-md py-2.5 outline-none focus:ring-2 focus:ring-secondary transition-all shadow-sm" id="mobile-number" placeholder="Enter 10-digit mobile" type="tel" value="98765 43210"/>
+<span class="absolute right-3 top-3 material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Used for urgent case updates, repudiation rebuttal confirmations, and WhatsApp triage alerts.
+          </p>
+</div>
+<!-- Country and City/State Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Country Dropdown -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="country-residence">
+              Country of Current Residence <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low focus:bg-surface text-primary font-body-lg text-body-lg rounded-lg px-space-md py-2.5 pr-10 outline-none focus:ring-2 focus:ring-secondary transition-all shadow-sm" id="country-residence">
+<option selected="" value="IN">India (+91)</option>
+<option value="US">United States (+1)</option>
+<option value="AE">United Arab Emirates (+971)</option>
+<option value="GB">United Kingdom (+44)</option>
+<option value="SG">Singapore (+65)</option>
+<option value="CA">Canada (+1)</option>
+<option value="AU">Australia (+61)</option>
+<option value="OTHER">Other Jurisdictions</option>
+</select>
+<span class="absolute right-3 top-3 material-symbols-outlined text-[20px] text-on-surface-variant pointer-events-none">
+                arrow_drop_down
+              </span>
+</div>
+</div>
+<!-- City / State -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="city-state">
+              City &amp; State of Residence <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low focus:bg-surface text-primary font-body-lg text-body-lg rounded-lg px-space-md py-2.5 outline-none focus:ring-2 focus:ring-secondary transition-all shadow-sm" id="city-state" placeholder="e.g. Pune, Maharashtra" type="text" value="Bengaluru, Karnataka"/>
+<span class="absolute right-3 top-3 material-symbols-outlined text-[18px] text-on-surface-variant">location_on</span>
+</div>
+</div>
+</div>
+<!-- Policyholder Category Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">
+            Policyholder Category <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-1 gap-2.5" id="category-selector">
+<!-- Option 1: Selected -->
+<label class="flex items-center gap-space-sm p-space-sm md:px-space-md bg-secondary-container/20 rounded-lg cursor-pointer hover:bg-secondary-container/30 transition-all">
+<input checked="" class="w-5 h-5 text-secondary accent-secondary focus:ring-0 cursor-pointer" name="policyholder-type" type="radio" value="resident"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Self / Resident Indian Policyholder</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Holding health, life, or motor policy issued directly in India.</span>
+</div>
+</label>
+<!-- Option 2 -->
+<label class="flex items-center gap-space-sm p-space-sm md:px-space-md bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-variant/40 transition-all">
+<input class="w-5 h-5 text-secondary accent-secondary focus:ring-0 cursor-pointer" name="policyholder-type" type="radio" value="nri"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-semibold">NRI / Overseas Family Member</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Managing parents' or family claims remotely in Indian healthcare institutions.</span>
+</div>
+</label>
+<!-- Option 3 -->
+<label class="flex items-center gap-space-sm p-space-sm md:px-space-md bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-variant/40 transition-all">
+<input class="w-5 h-5 text-secondary accent-secondary focus:ring-0 cursor-pointer" name="policyholder-type" type="radio" value="senior"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Senior Citizen (Age 60+)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Priority expedited track with dedicated voice concierge access.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Optional Alternate/Emergency WhatsApp -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="alt-mobile">
+              Emergency / Alternate WhatsApp Number
+            </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Optional</span>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-low focus:bg-surface text-primary font-body-lg text-body-lg rounded-lg px-space-md py-2.5 outline-none focus:ring-2 focus:ring-secondary transition-all shadow-sm" id="alt-mobile" placeholder="+91 00000 00000" type="tel" value="+91 98111 22334"/>
+<span class="absolute right-3 top-3 material-symbols-outlined text-[18px] text-on-surface-variant">phone_in_talk</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Recommended for overseas policyholders or adult children tracking an elder parent's hospitalized claim.
+          </p>
+</div>
+<!-- Checkbox Agreements -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<label class="flex items-start gap-3 cursor-pointer">
+<input checked="" class="mt-1 w-5 h-5 rounded text-secondary accent-secondary cursor-pointer shrink-0" type="checkbox"/>
+<span class="font-body-md text-body-md text-primary select-none">
+              Receive real-time milestone updates on WhatsApp &amp; SMS <span class="font-semibold text-secondary">(Highly Recommended for rapid 2-hour hospital approvals)</span>.
+            </span>
+</label>
+<label class="flex items-start gap-3 cursor-pointer">
+<input checked="" class="mt-1 w-5 h-5 rounded text-secondary accent-secondary cursor-pointer shrink-0" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface select-none">
+              I confirm that I am the principal policyholder or a legally authorized family representative acting in good faith.
+            </span>
+</label>
+</div>
+<!-- Primary Action Button -->
+<div class="pt-space-sm">
+<button class="w-full h-12 bg-secondary hover:bg-on-secondary-fixed-variant text-on-secondary font-label-lg text-label-lg font-bold rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-sm cursor-pointer group" id="submit-profile-btn" type="submit">
+<span>Save &amp; Enter Customer Dashboard</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-2 mt-3 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">encrypted</span>
+<span>256-Bit SSL Secured • IRDAI Compliance Compliant • No Telemarketing Policy</span>
+</div>
+</div>
+</form>
+</div>
+<!-- RIGHT: Legal & Reassurance Dossier (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Primary Explanatory Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/40 text-on-tertiary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Why do we require verified details?</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Statutory Mandate</span>
+</div>
+</div>
+<div class="space-y-space-md text-on-surface">
+<!-- Item 1 -->
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">policy</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-primary">IRDAI Jurisdictional Protocol</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Insurance Ombudsman filings mandate accurate residential geography to direct legal briefs to the proper territorial ombudsman office (e.g., Delhi, Mumbai, Bengaluru, or Kochi).
+              </p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">public</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-primary">Global NRI Desk Coordination</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Managing overseas claims requires schedule synchronization across US, GCC, UK, and APAC time zones for live advocate strategy calls without roaming delays.
+              </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-primary">Absolute Zero-Spam Assurance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                We are fiduciary advocates, not insurance brokers. Your phone number is strictly guarded under ISO-27001 protocols and will never be contacted for marketing or cross-selling.
+              </p>
+</div>
+</div>
+</div>
+<!-- Trust Metric Graphic (SVG Data Visual) -->
+<div class="mt-space-lg pt-space-md bg-surface-container-lowest rounded-lg p-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-primary font-bold">Fast-Track Triage SLA</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">98.4% On-Time</span>
+</div>
+<!-- Inline Sparkline / Timeline bar -->
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full rounded-full" style="width: 82%"></div>
+<div class="bg-secondary-fixed h-full" style="width: 18%"></div>
+</div>
+<div class="flex justify-between items-center mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>Profile Verified</span>
+<span>•</span>
+<span>Advocate Assigned (15m)</span>
+<span>•</span>
+<span>Case Lodged</span>
+</div>
+</div>
+</div>
+<!-- Dedicated Advocate Guarantee Badge -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+<div class="relative shrink-0 w-16 h-16 rounded-full overflow-hidden bg-primary-container">
+<div class="w-full h-full bg-cover bg-center" data-alt="Close-up executive portrait of a senior Indian insurance claims lawyer wearing formal navy blazer with warm empathetic smile in modern office, professional lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJqJ6MiicWNOnTAe_D0TQrohAvNekAgxXF7sjtNf8e1HYDnbEp2f1H_WfxHqSODZ_VMysiUHdexnhoAf1IAnFyHhnWNaxsSAnLAhDPBbsDhPvOI6lf_-uv3lxigcG58lCZtkdsqYDRUU1K3vfgMrU4t42c9YJ3p3-pRsHVt1yeltgk6D3ofY8EDpIMxXAa7ZByeYskA90TRR_ifqepF-GpLSk-FdOfYQhCzIjBAA')"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Assigned Advisory Desk</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary truncate">Adv. Meera Sen &amp; Team</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+            Senior Ombudsman Advocate • 14+ yrs insurance recovery
+          </p>
+</div>
+</div>
+<!-- Emergency Helpline Callout -->
+<div class="p-space-md rounded-xl bg-tertiary-fixed/20 text-on-tertiary-fixed-variant flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">support_agent</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">Need Help During Signup?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Toll-free Priority Desk: 1800-419-7284</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const radioContainer = document.getElementById('category-selector');
+    if (!radioContainer) return;
+    
+    const labels = radioContainer.querySelectorAll('label');
+    labels.forEach(label => {
+      const radio = label.querySelector('input[type="radio"]');
+      radio.addEventListener('change', () => {
+        labels.forEach(l => {
+          l.classList.remove('bg-secondary-container/20');
+          l.classList.add('bg-surface-container-low');
+        });
+        if (radio.checked) {
+          label.classList.remove('bg-surface-container-low');
+          label.classList.add('bg-secondary-container/20');
+        }
+      });
+    });
+
+    const submitBtn = document.getElementById('submit-profile-btn');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', (e) => {
+        const origText = submitBtn.innerHTML;
+        submitBtn.innerHTML = `
+          <span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span>
+          <span>Securing Dossier & Opening Portal...</span>
+        `;
+        submitBtn.classList.add('opacity-90', 'pointer-events-none');
+        setTimeout(() => {
+          submitBtn.innerHTML = origText;
+          submitBtn.classList.remove('opacity-90', 'pointer-events-none');
+        }, 1800);
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low/80 py-space-lg shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="max-w-7xl mx-auto px-margin flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-md text-label-md text-on-surface-variant"><div>© 2024 ClaimSathi Legal &amp; Financial Claims Advocacy. All rights reserved.</div><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" data-path="terms-of-advocacy" href="#">Terms of Service</a><a class="hover:text-primary transition-colors" data-path="security-protocols" href="#">Security Protocols</a></div></div></footer></body></html>

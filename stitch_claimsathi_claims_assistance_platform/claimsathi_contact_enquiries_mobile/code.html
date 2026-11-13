@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-dim": "#cfdaf2", "surface": "#f9f9ff", "tertiary-fixed": "#ffdea0", "surface-tint": "#4b607b", "on-error-container": "#93000a", "primary": "#001125", "on-tertiary-fixed-variant": "#5a430f", "surface-variant": "#d8e3fb", "inverse-surface": "#263143", "on-primary": "#ffffff", "on-secondary-container": "#006f66", "on-secondary-fixed": "#00201d", "primary-fixed-dim": "#b3c8e8", "background": "#f9f9ff", "tertiary-fixed-dim": "#e3c282", "on-surface-variant": "#44474d", "on-background": "#111c2d", "surface-container-high": "#dee8ff", "outline": "#74777e", "on-primary-fixed-variant": "#344863", "on-secondary-fixed-variant": "#005049", "surface-container": "#e7eeff", "error": "#ba1a1a", "secondary": "#006a62", "secondary-fixed-dim": "#78d7cb", "secondary-fixed": "#95f3e7", "on-tertiary": "#ffffff", "tertiary": "#180f00", "tertiary-container": "#322300", "surface-container-low": "#f0f3ff", "on-primary-container": "#798eac", "on-secondary": "#ffffff", "surface-container-highest": "#d8e3fb", "surface-container-lowest": "#ffffff", "secondary-container": "#92f0e4", "primary-container": "#10263f", "inverse-primary": "#b3c8e8", "primary-fixed": "#d3e4ff", "error-container": "#ffdad6", "on-tertiary-container": "#a5894e", "outline-variant": "#c4c6ce", "surface-bright": "#f9f9ff", "on-tertiary-fixed": "#261a00", "inverse-on-surface": "#ecf1ff", "on-primary-fixed": "#051c35", "on-error": "#ffffff", "on-surface": "#111c2d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "3rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-2xl": "4rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "headline-md": ["Merriweather"], "headline-xl-mobile": ["Merriweather"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Merriweather"], "body-md": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"], "headline-lg": ["Merriweather"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Merriweather"], "display-lg-mobile": ["Merriweather"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Merriweather"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["22px", { lineHeight: "32px", fontWeight: "700" }], "headline-xl-mobile": ["26px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display-lg": ["48px", { lineHeight: "60px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-xl": ["18px", { lineHeight: "30px", fontWeight: "400" }], "headline-lg": ["28px", { lineHeight: "38px", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-xl": ["36px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "700" }], "display-lg-mobile": ["32px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Navigation Menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container active:bg-surface-container-high transition-colors" id="client-drawer-toggle"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[20px]">gavel</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">ClaimSathi</span></div><span class="font-label-sm text-[10px] text-outline leading-none">Every Rupee Matters</span></div></div><div class="flex items-center gap-space-xs"><a class="h-9 px-2.5 flex items-center gap-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm transition-transform active:scale-95" href="tel:18002524672"><span class="material-symbols-outlined text-[16px]">call</span><span class="hidden xs:inline">Helpline</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0" id="client-drawer"><div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" id="client-drawer-backdrop"></div><nav class="absolute top-0 left-0 bottom-0 w-5/6 max-w-xs bg-surface-container-lowest p-space-lg flex flex-col justify-between shadow-2xl transform -translate-x-full transition-transform duration-300" data-active-classes="bg-secondary/10 text-secondary font-semibold"><div class="space-y-space-md"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[24px]">balance</span><span class="font-headline-sm text-headline-sm text-primary">ClaimSathi</span></div><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container" id="client-drawer-close"><span class="material-symbols-outlined">close</span></button></div><div class="flex flex-col gap-1"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="client-home" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Home</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="how-we-work" href="#"><span class="material-symbols-outlined text-[20px]">policy</span><span>How We Work</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="transparent-fees" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Transparent Fees</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-secondary/10 text-secondary font-semibold" data-path="contact-enquiries" href="#"><span class="material-symbols-outlined text-[20px]">support_agent</span><span>Contact &amp; Enquiries</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="client-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Customer Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="my-claims" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span>My Claims</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="register-new-claim" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>Register New Claim</span></a></div></div><div class="pt-space-md border-t border-outline-variant/30 space-y-3"><a class="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-secondary text-on-secondary font-label-lg" href="tel:18002524672"><span class="material-symbols-outlined text-[18px]">phone_in_talk</span><span>1800-CLAIM-SATHI</span></a><p class="font-label-sm text-outline text-[11px] leading-relaxed text-center">Licensed Legal &amp; Insurance Advisors across PAN India.</p></div></nav></div><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-24 space-y-space-lg px-gutter-mobile">
+<!-- Editorial Header & Warm Framing -->
+<section class="mt-space-md flex flex-col space-y-space-xs text-left">
+<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] shadow-sm">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+<span>Advocate-Client Privilege Protected</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight pt-1">
+      Direct Legal Chamber &amp; Enquiries
+    </h1>
+<p class="font-headline-sm text-headline-sm text-secondary italic">
+      “Every Rupee Matters. We Take It Personally.”
+    </p>
+<p class="font-body-md text-body-md text-on-surface-variant pt-1">
+      When an insurance company unjustly withholds your legitimate dues, our senior panel advocates step in immediately. Connect with our dedicated recovery ombudsman desks.
+    </p>
+</section>
+<!-- High-Stakes 24/7 Hospital Cashless Emergency Hotline -->
+<section class="relative overflow-hidden rounded-xl bg-primary text-on-primary p-space-lg shadow-xl shadow-primary/10">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-secondary/20 blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-3 relative z-10">
+<div class="flex items-center gap-2">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary-fixed-dim"></span>
+</span>
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary-fixed font-bold">24/7 Priority Emergency</span>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">local_hospital</span>
+</div>
+<div class="mt-3 relative z-10 space-y-1">
+<h2 class="font-headline-md text-headline-md text-on-primary leading-snug">Hospital Cashless Denial?</h2>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+        Admitted or awaiting urgent TPA discharge clearance? Our emergency legal unit intervenes within 60 minutes to overturn arbitrary rejections.
+      </p>
+</div>
+<div class="mt-5 relative z-10 flex flex-col gap-2">
+<a class="w-full h-12 flex items-center justify-center gap-2 rounded-lg bg-secondary text-on-secondary font-label-lg transition-transform active:scale-[0.98] shadow-md hover:bg-on-secondary-container" href="tel:18002524672">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+<span class="font-bold tracking-wide">Call 1800-CLAIM-SATHI</span>
+</a>
+<span class="text-center font-label-sm text-[11px] text-primary-fixed-dim">Toll-Free PAN-India • Available 24 Hours • Zero Wait Time</span>
+</div>
+</section>
+<!-- Quick Mobile Legal Callback Form -->
+<section class="rounded-xl bg-surface-container-lowest p-space-lg shadow-[0_4px_20px_-2px_rgba(16,38,63,0.06)]">
+<div class="flex items-center gap-3 pb-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">quick_reference</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Priority Callback Dossier</h3>
+<p class="font-label-sm text-on-surface-variant">Senior Legal Advocate Assesses within 2 Hours</p>
+</div>
+</div>
+<form class="mt-space-md space-y-space-md" id="enquiry-form" onsubmit="event.preventDefault(); showConfirmation();">
+<!-- Full Name -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="full-name">Policyholder / Claimant Name <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full bg-surface-container-low rounded-lg px-3.5 py-3 font-body-lg text-body-lg text-on-surface placeholder:text-outline/60 focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="full-name" placeholder="e.g. Ramesh Chandra Verma" required="" type="text"/>
+</div>
+</div>
+<!-- Mobile Number -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="mobile-number">Direct Mobile Number (for SMS &amp; Call) <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 font-label-md text-on-surface-variant select-none">+91</span>
+<input class="w-full bg-surface-container-low rounded-lg pl-14 pr-3.5 py-3 font-body-lg text-body-lg text-on-surface placeholder:text-outline/60 focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="mobile-number" maxlength="10" pattern="[6-9][0-9]{9}" placeholder="98765 43210" required="" type="tel"/>
+</div>
+</div>
+<!-- Insurer Name -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="insurer-name">Insurance Provider / TPA Name <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low rounded-lg px-3.5 py-3 font-body-lg text-body-lg text-on-surface placeholder:text-outline/60 focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="insurer-name" placeholder="e.g. Star Health, HDFC ERGO, Care, Max Bupa" required="" type="text"/>
+</div>
+<!-- Claim Issue Type (Interactive Pill Grid) -->
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-on-surface">Nature of Claim Dispute <span class="text-error">*</span></label>
+<div class="grid grid-cols-1 gap-2" id="dispute-selector">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-secondary-container has-[:checked]:text-on-secondary-container">
+<input checked="" class="w-4 h-4 accent-secondary" name="claim_issue" type="radio" value="cashless_denied"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md">Cashless Denied at Hospital</span>
+<span class="font-body-sm text-body-sm opacity-80">Hospitalization ongoing or pending discharge</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-secondary-container has-[:checked]:text-on-secondary-container">
+<input class="w-4 h-4 accent-secondary" name="claim_issue" type="radio" value="repudiated"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md">Reimbursement Repudiated / Rejected</span>
+<span class="font-body-sm text-body-sm opacity-80">Citing non-disclosure, pre-existing, or clause 4.1</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-secondary-container has-[:checked]:text-on-secondary-container">
+<input class="w-4 h-4 accent-secondary" name="claim_issue" type="radio" value="arbitrary_deductions"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md">Arbitrary Deductions / Partial Payout</span>
+<span class="font-body-sm text-body-sm opacity-80">Over 20% slashed under non-medical/room cap</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer transition-colors has-[:checked]:bg-secondary-container has-[:checked]:text-on-secondary-container">
+<input class="w-4 h-4 accent-secondary" name="claim_issue" type="radio" value="delayed_30_days"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md">Unexplained Delay (&gt;30 Days)</span>
+<span class="font-body-sm text-body-sm opacity-80">Endless queries with zero settlement update</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Brief Description -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="claim-desc">Summary of Disputed Rupee Amount &amp; Context</label>
+<textarea class="w-full bg-surface-container-low rounded-lg p-3.5 font-body-md text-body-md text-on-surface placeholder:text-outline/60 focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary transition-all resize-none" id="claim-desc" placeholder="Approx rupee claim amount, hospital city, and insurer reason quoted..." rows="3"></textarea>
+</div>
+<!-- Consent & Privilege Guarantee -->
+<div class="flex items-start gap-2.5 pt-1">
+<input checked="" class="mt-1 w-4 h-4 rounded accent-secondary cursor-pointer" id="consent" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer" for="consent">
+          I consent to review under Advocate Confidentiality Protocol. No unsolicited marketing. Strict Non-Retainer Model.
+        </label>
+</div>
+<!-- Submit CTA Button -->
+<button class="w-full h-12 flex items-center justify-center gap-2 rounded-lg bg-secondary text-on-secondary font-label-lg shadow-md transition-all active:scale-[0.98] hover:bg-on-secondary-container" type="submit">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+<span>Request Immediate Legal Callback</span>
+</button>
+</form>
+<!-- Success State Toast Modal (Revealed via JS) -->
+<div class="hidden mt-4 p-4 rounded-lg bg-secondary-container text-on-secondary-container space-y-2" id="form-success">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px] text-secondary">verified</span>
+<span class="font-label-lg font-bold">Callback Priority Ticket Generated</span>
+</div>
+<p class="font-body-sm text-body-sm">
+        Case Reference <strong class="font-mono text-primary font-bold">#CS-IND-8491</strong> assigned to Duty Advocate. You will receive an encrypted WhatsApp acknowledgement and call within 120 minutes.
+      </p>
+</div>
+</section>
+<!-- Direct Chamber Advisory Contacts (Instant Channels) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">Direct Chamber Connect</h3>
+<span class="font-label-sm text-[11px] text-outline">Immediate Dispatch</span>
+</div>
+<!-- WhatsApp Quick Chat -->
+<a class="flex items-center justify-between p-4 rounded-xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(16,38,63,0.04)] active:bg-surface-container transition-colors" href="https://wa.me/918002524672?text=ClaimSathi%20Advocate%20Urgent%20Assistance" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-[#25D366]/15 text-[#128C7E] flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">chat</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-primary">WhatsApp Chamber Desk</span>
+<span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Send rejection letter PDF / photos</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">arrow_forward_ios</span>
+</a>
+<!-- Official Email -->
+<a class="flex items-center justify-between p-4 rounded-xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(16,38,63,0.04)] active:bg-surface-container transition-colors" href="mailto:help@claimsathi.org">
+<div class="flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">alternate_email</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-primary">help@claimsathi.org</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Submit policy dossiers &amp; queries</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">arrow_forward_ios</span>
+</a>
+<!-- Chamber Hours & SLA -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">schedule</span>
+</div>
+<div class="flex flex-col space-y-0.5">
+<span class="font-label-md text-label-md text-primary">Chamber Court &amp; Hearing Hours</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Monday – Saturday: <strong>08:30 AM – 08:30 PM IST</strong><br/>
+          Hospital Denials: <strong>24/7 Uninterrupted Hotline</strong>
+</p>
+</div>
+</div>
+</section>
+<!-- Physical Chamber Locations & Ombudsman Desks -->
+<section class="space-y-space-md">
+<div class="flex flex-col space-y-0.5">
+<h3 class="font-headline-sm text-headline-sm text-primary">Chambers &amp; Ombudsman Desks</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strategic legal liaison locations across India</p>
+</div>
+<!-- Bengaluru Principal Desk -->
+<article class="rounded-xl bg-surface-container-lowest p-space-md shadow-[0_4px_16px_rgba(16,38,63,0.04)] space-y-3">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">Bengaluru Principal Desk</span>
+</div>
+<span class="inline-block px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-bold">Chambers Headquarters</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        ClaimSathi Legal Advocacy Chambers, 4th Floor, Prestige Trade Tower, Palace Road, High Grounds, Bengaluru, Karnataka 560001
+      </p>
+<div class="h-28 rounded-lg overflow-hidden relative shadow-inner">
+<div class="w-full h-full bg-cover bg-center" data-alt="Stylized architectural aerial view map pinpoint of prestige commercial legal chamber high rise located in Bengaluru Palace Road with clean corporate roads and teal destination mark." data-location="Prestige Trade Tower, Palace Road, Bengaluru" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqoI7r-rgFTUfaYWg0mNgFYeL6a5CwE0PhMt3RdCNpq43Q2NBKiZS0qJSqZUzlWLVHeygyZoEhYpB8lcD05UcBJn_IGAROUegCoDcyoEBkn8slEpNO9C-qyysqmZQAO4vNq__aTF9_-V_doM7mKmz6p-DiHZehDgpJgpcWncj34gA_Q05GSOFTCEE4i-sK9Ylic4AxoX2x7Ynrj5ZFR7FzabcCkUYR6YWh6wllZQ')"></div>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<a class="absolute bottom-2 right-2 px-2.5 py-1 rounded bg-surface text-primary font-label-sm text-[11px] shadow-sm flex items-center gap-1" href="https://maps.google.com/?q=Prestige+Trade+Tower+Bengaluru" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[14px]">directions</span>
+<span>Open Map</span>
+</a>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-[11px]">
+<span>Contact: +91 80 4920 1800</span>
+<span class="text-secondary font-semibold">In-person consultations by appointment</span>
+</div>
+</article>
+<!-- Mumbai Ombudsman Liaison Desk -->
+<article class="rounded-xl bg-surface-container-lowest p-space-md shadow-[0_4px_16px_rgba(16,38,63,0.04)] space-y-3">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">Mumbai Ombudsman Desk</span>
+</div>
+<span class="inline-block px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[10px] font-bold">Western Regional Office</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Level 7, Maker Chambers V, Nariman Point (Opp. Insurance Ombudsman Tribunal), Mumbai, Maharashtra 400021
+      </p>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-[11px]">
+<span>Desk: +91 22 6128 4200</span>
+<span class="text-on-surface-variant">Ombudsman Filings &amp; Appeals</span>
+</div>
+</article>
+<!-- Delhi Ombudsman Liaison Desk -->
+<article class="rounded-xl bg-surface-container-lowest p-space-md shadow-[0_4px_16px_rgba(16,38,63,0.04)] space-y-3">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">Delhi NCDRC &amp; Liaison Desk</span>
+</div>
+<span class="inline-block px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[10px] font-bold">National Consumer Forum Wing</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Chamber Block II, Barakhamba Road, Connaught Place (Proximity to NCDRC Bench), New Delhi, Delhi 110001
+      </p>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-[11px]">
+<span>Desk: +91 11 4301 9900</span>
+<span class="text-on-surface-variant">Regulatory &amp; Legal Notices</span>
+</div>
+</article>
+</section>
+<!-- Editorial Institutional Trust Guarantee -->
+<section class="rounded-xl bg-surface-container p-space-md flex flex-col space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+<span class="font-label-lg text-primary">Legal Privilege &amp; Sovereign Data Shield</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      All case communications, diagnostic records, policy schedules, and discharge papers submitted through ClaimSathi are protected under Section 126 of the Indian Evidence Act (Advocate-Client Privilege). Your medical history is encrypted and strictly never shared with insurer underwriters or third-party marketing brokers.
+    </p>
+</section>
+</div>
+<script>
+  function showConfirmation() {
+    const successToast = document.getElementById('form-success');
+    if (successToast) {
+      successToast.classList.remove('hidden');
+      successToast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-low px-gutter-mobile py-space-sm"><div class="max-w-md mx-auto text-center space-y-1"><p class="font-label-sm text-[11px] text-outline leading-tight">ClaimSathi Legal Advocacy Chambers • Regulated Advisory • Strict Non-Retainer Model</p><p class="font-label-sm text-[10px] text-outline/80 leading-tight pb-1">Disclaimer: ClaimSathi acts as an independent policyholder legal advocate. We are not an insurance company.</p></div></footer><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="client-home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-[11px]">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-claims" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[11px]">Claims</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-secondary hover:text-secondary transition-transform active:scale-95" data-path="register-new-claim" href="#"><span class="material-symbols-outlined text-[26px]">add_circle</span><span class="font-label-sm text-[11px]">File Claim</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="transparent-fees" href="#"><span class="material-symbols-outlined text-[22px]">verified</span><span class="font-label-sm text-[11px]">Fees</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="client-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-[11px]">Portal</span></a></div></nav><script>const drawer=document.getElementById('client-drawer');const toggle=document.getElementById('client-drawer-toggle');const close=document.getElementById('client-drawer-close');const backdrop=document.getElementById('client-drawer-backdrop');function openDrawer(){drawer.classList.remove('pointer-events-none','opacity-0');drawer.classList.add('opacity-100');drawer.querySelector('nav').classList.remove('-translate-x-full');}function closeDrawer(){drawer.classList.add('pointer-events-none','opacity-0');drawer.classList.remove('opacity-100');drawer.querySelector('nav').classList.add('-translate-x-full');}toggle?.addEventListener('click',openDrawer);close?.addEventListener('click',closeDrawer);backdrop?.addEventListener('click',closeDrawer);</script></body></html>

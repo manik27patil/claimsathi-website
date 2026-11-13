@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-dim": "#cfdaf2", "surface": "#f9f9ff", "tertiary-fixed": "#ffdea0", "surface-tint": "#4b607b", "on-error-container": "#93000a", "primary": "#001125", "on-tertiary-fixed-variant": "#5a430f", "surface-variant": "#d8e3fb", "inverse-surface": "#263143", "on-primary": "#ffffff", "on-secondary-container": "#006f66", "on-secondary-fixed": "#00201d", "primary-fixed-dim": "#b3c8e8", "background": "#f9f9ff", "tertiary-fixed-dim": "#e3c282", "on-surface-variant": "#44474d", "on-background": "#111c2d", "surface-container-high": "#dee8ff", "outline": "#74777e", "on-primary-fixed-variant": "#344863", "on-secondary-fixed-variant": "#005049", "surface-container": "#e7eeff", "error": "#ba1a1a", "secondary": "#006a62", "secondary-fixed-dim": "#78d7cb", "secondary-fixed": "#95f3e7", "on-tertiary": "#ffffff", "tertiary": "#180f00", "tertiary-container": "#322300", "surface-container-low": "#f0f3ff", "on-primary-container": "#798eac", "on-secondary": "#ffffff", "surface-container-highest": "#d8e3fb", "surface-container-lowest": "#ffffff", "secondary-container": "#92f0e4", "primary-container": "#10263f", "inverse-primary": "#b3c8e8", "primary-fixed": "#d3e4ff", "error-container": "#ffdad6", "on-tertiary-container": "#a5894e", "outline-variant": "#c4c6ce", "surface-bright": "#f9f9ff", "on-tertiary-fixed": "#261a00", "inverse-on-surface": "#ecf1ff", "on-primary-fixed": "#051c35", "on-error": "#ffffff", "on-surface": "#111c2d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "3rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-2xl": "4rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "headline-md": ["Merriweather"], "headline-xl-mobile": ["Merriweather"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Merriweather"], "body-md": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"], "headline-lg": ["Merriweather"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Merriweather"], "display-lg-mobile": ["Merriweather"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Merriweather"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["22px", { lineHeight: "32px", fontWeight: "700" }], "headline-xl-mobile": ["26px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display-lg": ["48px", { lineHeight: "60px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-xl": ["18px", { lineHeight: "30px", fontWeight: "400" }], "headline-lg": ["28px", { lineHeight: "38px", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-xl": ["36px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "700" }], "display-lg-mobile": ["32px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Navigation Menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container active:bg-surface-container-high transition-colors" id="client-drawer-toggle"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[20px]">gavel</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">ClaimSathi</span></div><span class="font-label-sm text-[10px] text-outline leading-none">Every Rupee Matters</span></div></div><div class="flex items-center gap-space-xs"><a class="h-9 px-2.5 flex items-center gap-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm transition-transform active:scale-95" href="tel:18002524672"><span class="material-symbols-outlined text-[16px]">call</span><span class="hidden xs:inline">Helpline</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0" id="client-drawer"><div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" id="client-drawer-backdrop"></div><nav class="absolute top-0 left-0 bottom-0 w-5/6 max-w-xs bg-surface-container-lowest p-space-lg flex flex-col justify-between shadow-2xl transform -translate-x-full transition-transform duration-300" data-active-classes="bg-secondary/10 text-secondary font-semibold"><div class="space-y-space-md"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[24px]">balance</span><span class="font-headline-sm text-headline-sm text-primary">ClaimSathi</span></div><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container" id="client-drawer-close"><span class="material-symbols-outlined">close</span></button></div><div class="flex flex-col gap-1"><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-secondary/10 text-secondary font-semibold" data-path="client-home" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Home</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="how-we-work" href="#"><span class="material-symbols-outlined text-[20px]">policy</span><span>How We Work</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="transparent-fees" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Transparent Fees</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="contact-enquiries" href="#"><span class="material-symbols-outlined text-[20px]">support_agent</span><span>Contact &amp; Enquiries</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="client-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Customer Dashboard</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="my-claims" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span>My Claims</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="register-new-claim" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>Register New Claim</span></a></div></div><div class="pt-space-md border-t border-outline-variant/30 space-y-3"><a class="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-secondary text-on-secondary font-label-lg" href="tel:18002524672"><span class="material-symbols-outlined text-[18px]">phone_in_talk</span><span>1800-CLAIM-SATHI</span></a><p class="font-label-sm text-outline text-[11px] leading-relaxed text-center">Licensed Legal &amp; Insurance Advisors across PAN India.</p></div></nav></div><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Urgent Hospital Denial Banner -->
+<div class="px-gutter-mobile pt-3 pb-2">
+<div class="bg-primary text-on-primary rounded-xl p-3 shadow-md flex items-center justify-between gap-2.5">
+<div class="flex items-center gap-2 min-w-0">
+<span class="flex h-2.5 w-2.5 relative flex-shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary-fixed"></span>
+</span>
+<div class="min-w-0">
+<p class="font-label-sm text-[11px] text-tertiary-fixed leading-tight font-semibold">TPA CASHLESS REJECTED AT HOSPITAL?</p>
+<p class="font-body-sm text-[12px] text-primary-fixed-dim truncate">Immediate legal intervention within 45 mins</p>
+</div>
+</div>
+<a class="flex-shrink-0 bg-secondary px-3 py-1.5 rounded-lg text-on-secondary font-label-sm text-[12px] flex items-center gap-1 active:scale-95 transition-transform shadow-sm" href="tel:18002524672">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>SOS Help</span>
+</a>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="px-gutter-mobile pt-2 pb-4 flex flex-col gap-4">
+<!-- Trust Pill -->
+<div class="inline-flex items-center gap-1.5 bg-surface-container-high/90 text-primary px-3 py-1 rounded-full self-start shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-medium tracking-wide">IRDAI Redressal Legal Advocacy • PAN India</span>
+</div>
+<!-- Editorial Hero Title & Tagline -->
+<div class="space-y-2">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight leading-snug">
+        Wrongfully Rejected or Delayed Insurance Claim? <span class="text-secondary italic">We Fight for Every Rupee.</span>
+</h1>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+        Specialist legal chambers dedicated to policyholders. No out-of-pocket recovery costs. 
+        <strong class="text-primary font-semibold">Every Rupee Matters. We Take It Personally.</strong>
+</p>
+</div>
+<!-- Visual Anchor: Emotional Family Hero Card -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-xl bg-surface-container-high aspect-[4/3] flex items-end">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A warm, candid documentary photograph of an Indian father in a blue shirt sitting lovingly with his young son and daughter on a cozy beige living room sofa. Soft golden daylight streams in through a sheer balcony curtain, illuminating genuine smiles and joyful relief. Cinematic editorial quality with warm amber and deep navy accents in the home decor, symbolizing family safety, financial protection, and peace of mind." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANqIYqKbAKUdMKJuqJmL1_sR6xDnIu_59KqFl79rxynLoCovgrhUro51YhuUgX0PTwOAqMeR8Xet7qK8gWHntdK2qpFe1FcgMRl1f1pyWM2oVlHCKzerz7W8Q6tnYlGIk09PtYM30ehYPzEHFK6VlAuXnpMSu8eyVqL5Mo7HN64wZ3-VzhGs4prA3P08OMS-A-HziIRa4gmz9oSPEwANIORxaUOzCwPL_OMmKWpw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+<div class="relative z-10 p-4 w-full text-on-primary flex items-center justify-between">
+<div>
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-tertiary-fixed">Peace Restored</span>
+<p class="font-headline-sm text-headline-sm text-on-primary">₹38.5 Lakhs Recovered</p>
+<p class="font-body-sm text-[11px] text-primary-fixed-dim">Sharma Family vs. Private Insurer (Health Claim)</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Primary Mobile CTAs -->
+<div class="flex flex-col gap-2.5 pt-1">
+<a class="w-full h-12 bg-secondary text-on-secondary rounded-lg font-label-lg flex items-center justify-center gap-2 shadow-lg shadow-secondary/25 active:bg-secondary-container active:text-on-secondary-container transition-all" data-path="register-new-claim" href="#">
+<span class="material-symbols-outlined text-[20px]">document_scanner</span>
+<span>Evaluate My Claim (Free Scrutiny)</span>
+</a>
+<a class="w-full h-12 bg-surface-container-lowest text-primary rounded-lg font-label-lg flex items-center justify-center gap-2 shadow-sm active:bg-surface-container transition-all" href="tel:18002524672">
+<span class="material-symbols-outlined text-secondary text-[20px]">call</span>
+<span>Hospital Emergency: 1800-CLAIM-SATHI</span>
+</a>
+</div>
+<!-- Reassurance strip -->
+<div class="flex items-center justify-center gap-4 py-1 text-on-surface-variant font-label-sm text-[11px]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">lock_reset</span> Strict Confidentiality
+      </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">gavel</span> High Court Bar Council
+      </span>
+</div>
+</section>
+<!-- Key Statistics Mosaic / Carousel -->
+<section class="px-gutter-mobile py-4 bg-surface-container-low">
+<div class="flex items-center justify-between mb-3">
+<div>
+<p class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-bold">Track Record of Justice</p>
+<h2 class="font-headline-sm text-headline-sm text-primary">Proven Restitution Metrics</h2>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">trending_up</span>
+</div>
+<!-- 2x2 Grid of Key Numbers -->
+<div class="grid grid-cols-2 gap-2.5">
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-2">
+<span class="material-symbols-outlined text-[18px]">currency_rupee</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-primary tracking-tight leading-none">₹12.65<span class="text-secondary text-[16px] font-bold">+</span></div>
+<p class="font-label-sm text-[10px] uppercase text-outline mt-1 font-semibold">Crores Capital Reclaimed</p>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1.5 leading-snug">Direct NEFT transfers into claimant accounts.</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container mb-2">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-secondary tracking-tight leading-none">91.4%</div>
+<p class="font-label-sm text-[10px] uppercase text-outline mt-1 font-semibold">Legal Win Rate</p>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1.5 leading-snug">In Ombudsman &amp; Lok Adalat representations.</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">folder_special</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-primary tracking-tight leading-none">148<span class="text-secondary text-[16px] font-bold">+</span></div>
+<p class="font-label-sm text-[10px] uppercase text-outline mt-1 font-semibold">Active Legal Dockets</p>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1.5 leading-snug">Under judicial review across 17 regional benches.</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container flex items-center justify-center text-tertiary-fixed mb-2">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-primary tracking-tight leading-none">15-Day</div>
+<p class="font-label-sm text-[10px] uppercase text-outline mt-1 font-semibold">Statutory Guarantee</p>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1.5 leading-snug">Enforced insurer Grievance Officer response window.</p>
+</div>
+</div>
+</section>
+<!-- Interactive Policyholder Value Props: "Why Choose Us" -->
+<section class="px-gutter-mobile py-5 flex flex-col gap-3">
+<div class="space-y-1">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-bold">Uncompromising Advocacy</span>
+<h2 class="font-headline-md text-headline-md text-primary">Why Policyholders Entrust Us</h2>
+<p class="font-body-md text-on-surface-variant">We dismantle asymmetric advantages that private insurers exploit.</p>
+</div>
+<!-- Stacked Cards with Ambient Diffusion -->
+<div class="space-y-3 mt-1">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex gap-3.5 items-start">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex-shrink-0 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div class="space-y-1 min-w-0">
+<h3 class="font-headline-sm text-[16px] text-primary">High Court Advocate Representation</h3>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+            Your notice isn't a customer service complaint—it is an official legal dockets drafted by seasoned insurance litigators citing landmark Supreme Court precedents.
+          </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex gap-3.5 items-start">
+<div class="w-10 h-10 rounded-lg bg-secondary-container flex-shrink-0 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-[16px] text-primary">₹500 Scrutiny + No Win, No Fee</h3>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] px-2 py-0.5 rounded-full">Fair Pact</span>
+</div>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+            Pay only a nominal forensic document scrutiny fee of ₹500. Our 15% advocacy success fee applies ONLY when funds are recovered and credited to your account.
+          </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex gap-3.5 items-start">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex-shrink-0 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+</div>
+<div class="space-y-1 min-w-0">
+<h3 class="font-headline-sm text-[16px] text-primary">Zero Direct Fund Touch</h3>
+<p class="font-body-sm text-on-surface-variant leading-relaxed">
+            Claim settlements are paid directly by the insurance company via NEFT into the policyholder or nominee's personal bank account. We never handle client settlement capital.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4-Step Claim Restitution Workflow -->
+<section class="px-gutter-mobile py-5 bg-surface-container">
+<div class="space-y-1 mb-4">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-bold">Judicial Precision</span>
+<h2 class="font-headline-md text-headline-md text-primary">4-Step Restitution Path</h2>
+<p class="font-body-sm text-on-surface-variant">How we turn wrongful rejections into settled payouts.</p>
+</div>
+<!-- Timeline Component -->
+<div class="relative pl-6 space-y-5">
+<!-- Vertical Connecting Line -->
+<div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-outline-variant"></div>
+<!-- Step 1 -->
+<div class="relative flex items-start gap-3">
+<div class="absolute -left-6 top-0 w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-[11px] shadow-sm">
+          1
+        </div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm w-full">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-[15px] text-primary">Forensic Scrutiny</h4>
+<span class="font-label-sm text-[10px] text-secondary font-semibold">24-48 Hours</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-1 leading-snug">
+            Our medical specialists and insurance lawyers audit your rejection letter, proposal form, and treatment discharge summaries to uncover unlawful repudiation grounds.
+          </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-start gap-3">
+<div class="absolute -left-6 top-0 w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-[11px] shadow-sm">
+          2
+        </div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm w-full">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-[15px] text-primary">Insurer GRO Demand</h4>
+<span class="font-label-sm text-[10px] text-secondary font-semibold">Statutory 15 Days</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-1 leading-snug">
+            Formal legal petition served directly to the Principal Grievance Redressal Officer (GRO) citing IRDAI Master Circulars and breach of duty clauses.
+          </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex items-start gap-3">
+<div class="absolute -left-6 top-0 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-[11px] shadow-sm">
+          3
+        </div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm w-full">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-[15px] text-primary">Insurance Ombudsman Hearing</h4>
+<span class="font-label-sm text-[10px] text-secondary font-semibold">Fast-Track Hearing</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-1 leading-snug">
+            If the insurer stalls, we represent your dossier before the statutory Insurance Ombudsman under Rule 17 of the Insurance Ombudsman Rules, 2017.
+          </p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex items-start gap-3">
+<div class="absolute -left-6 top-0 w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-[11px] shadow-sm">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm w-full">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-[15px] text-primary">Direct Bank Restitution</h4>
+<span class="font-label-sm text-[10px] text-secondary font-semibold">100% Secure</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-1 leading-snug">
+            The insurer releases the approved settlement sum along with statutory penal interest directly to your savings account.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Supported Dispute Categories -->
+<section class="px-gutter-mobile py-5 flex flex-col gap-3">
+<div class="space-y-1">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-bold">Comprehensive Protection</span>
+<h2 class="font-headline-md text-headline-md text-primary">Dispute Specializations</h2>
+<p class="font-body-sm text-on-surface-variant">We resolve high-friction repudiations across all insurance lines.</p>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Category 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">local_hospital</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[15px] text-primary">Health &amp; Mediclaim Denials</h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Pre-existing disease (PED) &amp; proportionate deductions</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+<!-- Category 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">health_and_safety</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[15px] text-primary">Section 45 Life &amp; Term Disputes</h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Overcoming 3-year incontestability clause repudiations</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+<!-- Category 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">directions_car</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[15px] text-primary">Motor Total Loss &amp; Theft</h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Constructive total loss (CTL) &amp; IDV underpayment disputes</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+<!-- Category 4 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">store</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[15px] text-primary">SME &amp; Commercial Fire / Stock</h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Surveyor under-assessment &amp; under-insurance penalties</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Verified Policyholder Testimonials -->
+<section class="px-gutter-mobile py-5 bg-surface-container-low">
+<div class="space-y-1 mb-3">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-bold">Voices of Relief</span>
+<h2 class="font-headline-md text-headline-md text-primary">Real Indian Families We Stood By</h2>
+</div>
+<!-- Testimonial Cards Carousel / Stack -->
+<div class="space-y-3">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up profile portrait of a smiling Indian man in his late 40s wearing spectacles and a crisp formal collared shirt, reflecting trust and professional composure, clean indoor ambient lighting with neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOjomX3sVlu91sYtf3YphW5NRUZXmAsMvm065itIHCa32mJ4x4Zpj0BkwHgzGKbeXBzQjbYhZT4EgOBzauCKfaaHM_ljL1OICLanUWjZ6ksgInweNZElFInMkUUOVTUe34IJGSuHjU2mJE12pgj8F-2M8QvQMCPd5Vvc0Q4EL56rWzN3iKrkrZSTsvWlcp9jEg51TmOwzdLrIuvOc15aPhc8aT8ehrdEXSMU3R9Q"/>
+</div>
+<div>
+<p class="font-headline-sm text-[14px] text-primary leading-tight">Rajesh K. Mehta</p>
+<p class="font-body-sm text-[11px] text-outline">Ahmedabad, Gujarat</p>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-[10px] px-2 py-0.5 rounded-full font-semibold">₹8,40,000 Recovered</span>
+</div>
+<p class="font-body-sm text-on-surface-variant italic leading-relaxed">
+          “My mother's cardiac angioplasty claim was rejected within 2 hours on grounds of 'non-disclosure of hypertension'. ClaimSathi's advocate invoked Section 45 and forced the insurer to pay the entire bill plus 6% interest within 21 days.”
+        </p>
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>Verified Case Docket #CS-2024-8819</span>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of a confident Indian woman in her early 30s wearing a modern smart casual kurti, smiling warmly at camera against a soft blurred home office setting, warm natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBByiPZtaIjeYn2BcYVITazsy2uMv11STYtMIo4Dxv4EghCDWFHvERKeByyvJ7QPyj9HwNFJ9kmZcsTcY1uSyttbegYSQqgm4A9hpE-5_9d8HkGi3NevTHn67FxQhOJj5tC1eDRlUXYnaSQcBsTdKGA9RaTdLBH0ioRP0S6qPVU_q_doCvloSt4erhfs3EvAxnyF9421YFbDkvjZv39cM00anc-OWbD3eeYVKFmhQ"/>
+</div>
+<div>
+<p class="font-headline-sm text-[14px] text-primary leading-tight">Sunita G. Iyer</p>
+<p class="font-body-sm text-[11px] text-outline">Bengaluru, Karnataka</p>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-[10px] px-2 py-0.5 rounded-full font-semibold">₹22,00,000 Recovered</span>
+</div>
+<p class="font-body-sm text-on-surface-variant italic leading-relaxed">
+          “When my husband passed away, the life insurer delayed the term insurance claim for 11 months demanding absurd records. ClaimSathi filed an urgent Ombudsman petition. We received the complete settlement directly in our bank account.”
+        </p>
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>Verified Case Docket #CS-2024-6402</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Claim Value Quick-Check Calculator Widget -->
+<section class="px-gutter-mobile py-5">
+<div class="bg-primary text-on-primary rounded-2xl p-4 shadow-xl space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-tertiary-fixed font-bold">Instant Estimate</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary">Estimate Recoverable Amount</h3>
+</div>
+<div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+</div>
+</div>
+<p class="font-body-sm text-primary-fixed-dim">
+        Move the slider to specify your repudiated claim amount and see potential statutory interest recoverable.
+      </p>
+<div class="space-y-2 pt-1">
+<div class="flex justify-between items-baseline">
+<span class="font-label-sm text-primary-fixed-dim text-[12px]">Rejected Claim Size:</span>
+<span class="font-headline-sm text-[18px] text-tertiary-fixed" id="claim-val-display">₹5,00,000</span>
+</div>
+<input class="w-full h-2 bg-primary-container rounded-lg appearance-none cursor-pointer accent-secondary" id="claim-slider" max="5000000" min="50000" step="50000" type="range" value="500000"/>
+</div>
+<div class="bg-primary-container p-3 rounded-xl flex items-center justify-between mt-2">
+<div>
+<p class="font-label-sm text-[10px] uppercase text-primary-fixed-dim">Estimated Payout With Penal Interest</p>
+<p class="font-headline-sm text-[17px] text-secondary-fixed" id="est-total-display">₹5,35,000</p>
+</div>
+<div class="text-right">
+<p class="font-label-sm text-[10px] uppercase text-primary-fixed-dim">Your Upfront Fee</p>
+<p class="font-headline-sm text-[17px] text-tertiary-fixed">₹500</p>
+</div>
+</div>
+<a class="w-full py-2.5 bg-secondary text-on-secondary rounded-lg font-label-md flex items-center justify-center gap-1.5 active:bg-secondary-container active:text-on-secondary-container transition-all" data-path="register-new-claim" href="#">
+<span>Proceed to Free Scrutiny</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Final Trust Credo Section -->
+<section class="px-gutter-mobile py-4 text-center space-y-2 mb-2">
+<div class="w-12 h-12 rounded-full bg-surface-container mx-auto flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">balance</span>
+</div>
+<h3 class="font-headline-sm text-[16px] text-primary">Our Statutory Legal Promise</h3>
+<p class="font-body-sm text-on-surface-variant max-w-xs mx-auto leading-relaxed">
+      If our forensic panel determines that an insurance repudiation was lawful under statutory IRDAI guidelines, we will tell you honestly within 48 hours and charge zero recovery fees.
+    </p>
+</section>
+<!-- Sticky Mobile Bottom Emergency Action Bar -->
+<div class="fixed bottom-16 left-0 right-0 z-40 px-3 py-2 bg-surface/95 backdrop-blur-md shadow-[0_-4px_16px_rgba(0,0,0,0.06)] flex items-center gap-2">
+<a class="flex-1 h-11 bg-surface-container-lowest text-primary rounded-lg font-label-md flex items-center justify-center gap-1.5 shadow-sm active:bg-surface-container transition-all" href="tel:18002524672">
+<span class="material-symbols-outlined text-secondary text-[18px]">phone_in_talk</span>
+<span>1800-252-4672</span>
+</a>
+<a class="flex-1 h-11 bg-secondary text-on-secondary rounded-lg font-label-md flex items-center justify-center gap-1.5 shadow-md shadow-secondary/20 active:bg-secondary-container active:text-on-secondary-container transition-all" data-path="register-new-claim" href="#">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span>File My Claim</span>
+</a>
+</div>
+</div>
+<script>
+  // Simple interactive claim slider calculator
+  const slider = document.getElementById('claim-slider');
+  const claimValDisplay = document.getElementById('claim-val-display');
+  const estTotalDisplay = document.getElementById('est-total-display');
+
+  if (slider && claimValDisplay && estTotalDisplay) {
+    const formatINR = (val) => {
+      return new Intl.NumberFormat('en-IN', {
+        style: 'currency',
+        currency: 'INR',
+        maximumFractionDigits: 0
+      }).format(val);
+    };
+
+    slider.addEventListener('input', (e) => {
+      const amount = parseInt(e.target.value, 10);
+      claimValDisplay.textContent = formatINR(amount);
+      
+      // Assumes 7% statutory penal interest accrued during wrongful grievance delay
+      const totalWithInterest = Math.round(amount * 1.07);
+      estTotalDisplay.textContent = formatINR(totalWithInterest);
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-low px-gutter-mobile py-space-sm"><div class="max-w-md mx-auto text-center space-y-1"><p class="font-label-sm text-[11px] text-outline leading-tight">ClaimSathi Legal Advocacy Chambers • Regulated Advisory • Strict Non-Retainer Model</p><p class="font-label-sm text-[10px] text-outline/80 leading-tight pb-1">Disclaimer: ClaimSathi acts as an independent policyholder legal advocate. We are not an insurance company.</p></div></footer><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-secondary font-semibold" data-path="client-home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-[11px]">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-claims" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[11px]">Claims</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-secondary hover:text-secondary transition-transform active:scale-95" data-path="register-new-claim" href="#"><span class="material-symbols-outlined text-[26px]">add_circle</span><span class="font-label-sm text-[11px]">File Claim</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="transparent-fees" href="#"><span class="material-symbols-outlined text-[22px]">verified</span><span class="font-label-sm text-[11px]">Fees</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="client-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-[11px]">Portal</span></a></div></nav><script>const drawer=document.getElementById('client-drawer');const toggle=document.getElementById('client-drawer-toggle');const close=document.getElementById('client-drawer-close');const backdrop=document.getElementById('client-drawer-backdrop');function openDrawer(){drawer.classList.remove('pointer-events-none','opacity-0');drawer.classList.add('opacity-100');drawer.querySelector('nav').classList.remove('-translate-x-full');}function closeDrawer(){drawer.classList.add('pointer-events-none','opacity-0');drawer.classList.remove('opacity-100');drawer.querySelector('nav').classList.add('-translate-x-full');}toggle?.addEventListener('click',openDrawer);close?.addEventListener('click',closeDrawer);backdrop?.addEventListener('click',closeDrawer);</script></body></html>
