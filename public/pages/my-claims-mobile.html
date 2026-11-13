@@ -1,0 +1,462 @@
+<!DOCTYPE html><html class="h-full" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-dim": "#cfdaf2", "surface": "#f9f9ff", "tertiary-fixed": "#ffdea0", "surface-tint": "#4b607b", "on-error-container": "#93000a", "primary": "#001125", "on-tertiary-fixed-variant": "#5a430f", "surface-variant": "#d8e3fb", "inverse-surface": "#263143", "on-primary": "#ffffff", "on-secondary-container": "#006f66", "on-secondary-fixed": "#00201d", "primary-fixed-dim": "#b3c8e8", "background": "#f9f9ff", "tertiary-fixed-dim": "#e3c282", "on-surface-variant": "#44474d", "on-background": "#111c2d", "surface-container-high": "#dee8ff", "outline": "#74777e", "on-primary-fixed-variant": "#344863", "on-secondary-fixed-variant": "#005049", "surface-container": "#e7eeff", "error": "#ba1a1a", "secondary": "#006a62", "secondary-fixed-dim": "#78d7cb", "secondary-fixed": "#95f3e7", "on-tertiary": "#ffffff", "tertiary": "#180f00", "tertiary-container": "#322300", "surface-container-low": "#f0f3ff", "on-primary-container": "#798eac", "on-secondary": "#ffffff", "surface-container-highest": "#d8e3fb", "surface-container-lowest": "#ffffff", "secondary-container": "#92f0e4", "primary-container": "#10263f", "inverse-primary": "#b3c8e8", "primary-fixed": "#d3e4ff", "error-container": "#ffdad6", "on-tertiary-container": "#a5894e", "outline-variant": "#c4c6ce", "surface-bright": "#f9f9ff", "on-tertiary-fixed": "#261a00", "inverse-on-surface": "#ecf1ff", "on-primary-fixed": "#051c35", "on-error": "#ffffff", "on-surface": "#111c2d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "3rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-2xl": "4rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "headline-md": ["Merriweather"], "headline-xl-mobile": ["Merriweather"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Merriweather"], "body-md": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"], "headline-lg": ["Merriweather"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Merriweather"], "display-lg-mobile": ["Merriweather"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Merriweather"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["22px", { lineHeight: "32px", fontWeight: "700" }], "headline-xl-mobile": ["26px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display-lg": ["48px", { lineHeight: "60px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-xl": ["18px", { lineHeight: "30px", fontWeight: "400" }], "headline-lg": ["28px", { lineHeight: "38px", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-xl": ["36px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "700" }], "display-lg-mobile": ["32px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style id="claims-micro-interactions">
+  @keyframes softPulseGlow {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 106, 98, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 6px rgba(0, 106, 98, 0); }
+  }
+  @keyframes urgentPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.82; transform: scale(0.99); }
+  }
+  @keyframes fadeInUpCard {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-soft-pulse {
+    animation: softPulseGlow 2.5s infinite ease-in-out;
+  }
+  .animate-urgent-pulse {
+    animation: urgentPulse 2s infinite ease-in-out;
+  }
+  .card-entrance {
+    animation: fadeInUpCard 0.4s ease-out backwards;
+  }
+  .interactive-card {
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  }
+  .interactive-card:active {
+    transform: scale(0.985);
+  }
+  .nav-tap-effect:active {
+    transform: scale(0.92);
+    filter: drop-shadow(0 0 6px rgba(0, 106, 98, 0.35));
+  }
+  .btn-press {
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-press:active {
+    transform: scale(0.97);
+    opacity: 0.92;
+  }
+</style></head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Navigation Menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container active:bg-surface-container-high transition-colors" id="client-drawer-toggle"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[20px]">gavel</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">ClaimSathi</span></div><span class="font-label-sm text-[10px] text-outline leading-none">Every Rupee Matters</span></div></div><div class="flex items-center gap-space-xs"><a class="h-9 px-2.5 flex items-center gap-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm transition-transform active:scale-95" href="tel:18002524672"><span class="material-symbols-outlined text-[16px]">call</span><span class="hidden xs:inline">Helpline</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0" id="client-drawer"><div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" id="client-drawer-backdrop"></div><nav class="absolute top-0 left-0 bottom-0 w-5/6 max-w-xs bg-surface-container-lowest p-space-lg flex flex-col justify-between shadow-2xl transform -translate-x-full transition-transform duration-300" data-active-classes="bg-secondary/10 text-secondary font-semibold"><div class="space-y-space-md"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[24px]">balance</span><span class="font-headline-sm text-headline-sm text-primary">ClaimSathi</span></div><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container" id="client-drawer-close"><span class="material-symbols-outlined">close</span></button></div><div class="flex flex-col gap-1"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="client-home" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Home</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="how-we-work" href="#"><span class="material-symbols-outlined text-[20px]">policy</span><span>How We Work</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="transparent-fees" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Transparent Fees</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="contact-enquiries" href="#"><span class="material-symbols-outlined text-[20px]">support_agent</span><span>Contact &amp; Enquiries</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="client-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Customer Dashboard</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-secondary/10 text-secondary font-semibold" data-path="my-claims" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span><span>My Claims</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-label-lg hover:bg-surface-container" data-path="register-new-claim" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>Register New Claim</span></a></div></div><div class="pt-space-md border-t border-outline-variant/30 space-y-3"><a class="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-secondary text-on-secondary font-label-lg" href="tel:18002524672"><span class="material-symbols-outlined text-[18px]">phone_in_talk</span><span>1800-CLAIM-SATHI</span></a><p class="font-label-sm text-outline text-[11px] leading-relaxed text-center">Licensed Legal &amp; Insurance Advisors across PAN India.</p></div></nav></div><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-20 space-y-space-md">
+<!-- Subtle Advisory Tagline Anchor -->
+<div class="px-gutter-mobile pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-secondary tracking-wider uppercase">Statutory Tracking Console</span>
+</div>
+<span class="font-label-sm text-outline-variant text-[10px]">Updated 12m ago</span>
+</div>
+<div class="px-gutter-mobile">
+<p class="font-headline-sm text-headline-sm text-primary tracking-tight">
+      Every Rupee Matters. <span class="text-secondary italic">We Take It Personally.</span>
+</p>
+</div>
+<!-- KPI Pill Grid / Carousel (Mobile Optimized, no scroll-trap) -->
+<div class="px-gutter-mobile">
+<div class="grid grid-cols-4 gap-2 bg-surface-container-low p-2 rounded-xl">
+<div class="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-sm text-headline-sm text-primary leading-none">02</span>
+<span class="font-label-sm text-[10px] text-outline mt-1 font-medium">Claims</span>
+</div>
+<div class="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-secondary/10 shadow-sm">
+<span class="font-headline-sm text-headline-sm text-secondary leading-none">01</span>
+<span class="font-label-sm text-[10px] text-secondary mt-1 font-semibold">Active</span>
+</div>
+<div class="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-sm text-headline-sm text-tertiary leading-none">01</span>
+<span class="font-label-sm text-[10px] text-outline mt-1 font-medium">Ombuds.</span>
+</div>
+<div class="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-headline-sm text-headline-sm text-on-secondary-container leading-none">01</span>
+<span class="font-label-sm text-[10px] text-outline mt-1 font-medium">Resolved</span>
+</div>
+</div>
+</div>
+<!-- Primary Active Case Header Card -->
+<div class="px-gutter-mobile">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col space-y-3 relative overflow-hidden interactive-card">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-secondary-container/30 to-transparent pointer-events-none rounded-tr-xl"></div>
+<!-- Docket & Countdown Row -->
+<div class="flex items-center justify-between gap-2">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[10px] tracking-wide">
+          CS-CLM-2025-0419
+        </span>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-semibold animate-pulse animate-urgent-pulse">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+<span>4 Days Left in Statutory GRO Window</span>
+</div>
+</div>
+<!-- Claim Title -->
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary leading-snug">
+          Medical Repudiation: Section 45 Defense Appeal
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Insurer: <strong class="text-primary font-semibold">Star Health Allied Insurance</strong>
+</p>
+</div>
+<!-- Financial & Forum Summary Box -->
+<div class="grid grid-cols-2 gap-2 pt-2 bg-surface-container-low p-2.5 rounded-lg">
+<div>
+<span class="font-label-sm text-[11px] text-outline block">Disputed Quantum</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">₹6,50,000</span>
+<span class="font-label-sm text-[10px] text-outline block">100% Retainer-Free</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] text-outline block">Escalation Forum</span>
+<span class="font-label-md text-label-md text-primary block leading-tight">Ombudsman Bengaluru</span>
+<span class="font-label-sm text-[10px] text-secondary font-medium block mt-0.5">Civil Jurisdiction Prepped</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-11 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95 transition-transform shadow-sm btn-press" id="view-dossier-btn">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Legal Dossier</span>
+</button>
+<button class="h-11 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform btn-press" id="escalate-toast-btn">
+<span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
+<span>Ombudsman Track</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 8-State Statutory Claim Journey Timeline -->
+<div class="px-gutter-mobile flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_tree</span>
+<h3 class="font-headline-sm text-[17px] text-primary">Statutory Workflow Track</h3>
+</div>
+<span class="font-label-sm text-[11px] text-secondary bg-secondary/10 px-2 py-0.5 rounded-full font-semibold">State 5 of 8 Active</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="relative pl-6 space-y-5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-variant">
+<!-- State 1: Completed -->
+<div class="relative group">
+<div class="absolute -left-6 top-0 w-4 h-4 rounded-full bg-secondary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-on-secondary text-[10px]">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary">1. Claim Submitted</span>
+<span class="font-label-sm text-[10px] text-outline">14 Oct 2024</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-tight mt-0.5">
+              Initial digital intake filed with digital signature.
+            </p>
+</div>
+</div>
+<!-- State 2: Completed -->
+<div class="relative">
+<div class="absolute -left-6 top-0 w-4 h-4 rounded-full bg-secondary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-on-secondary text-[10px]">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary">2. Under Initial Review</span>
+<span class="font-label-sm text-[10px] text-outline">15 Oct 2024</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-tight mt-0.5">
+              Statutory clause verification &amp; policy schedule auditing completed.
+            </p>
+</div>
+</div>
+<!-- State 3: Completed -->
+<div class="relative">
+<div class="absolute -left-6 top-0 w-4 h-4 rounded-full bg-secondary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-on-secondary text-[10px]">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary">3. Awaiting Customer Info</span>
+<span class="font-label-sm text-[10px] text-outline">17 Oct 2024</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-tight mt-0.5">
+              Complete Discharge Summary &amp; Histopathology biopsy authenticated.
+            </p>
+</div>
+</div>
+<!-- State 4: Completed -->
+<div class="relative">
+<div class="absolute -left-6 top-0 w-4 h-4 rounded-full bg-secondary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-on-secondary text-[10px]">check</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary">4. Accepted for Assistance</span>
+<span class="font-label-sm text-[10px] text-outline">19 Oct 2024</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-tight mt-0.5">
+              Legal Chambers accepted representation under Zero Retainer Guarantee.
+            </p>
+</div>
+</div>
+<!-- State 5: Active (Current Focus) -->
+<div class="relative pl-1">
+<div class="absolute -left-7 top-0 w-5 h-5 rounded-full bg-secondary flex items-center justify-center shadow-md ring-4 ring-secondary-container animate-soft-pulse">
+<span class="material-symbols-outlined text-on-secondary text-[12px] animate-spin">refresh</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">5. In Progress (Insurer GRO Stage)</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-[9px] uppercase tracking-wider">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1 leading-snug">
+              Formal Grievance Memorandum served to Principal Grievance Officer under Section 45 Insurance Act.
+            </p>
+<div class="mt-2.5 pt-2 flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline">Mandatory Insurer Turnaround:</span>
+<span class="font-label-sm text-[11px] text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">timer</span> 4 Business Days Left
+              </span>
+</div>
+</div>
+</div>
+<!-- State 6: Upcoming -->
+<div class="relative opacity-60">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-outline-variant"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">6. Awaiting Insurer Response</span>
+<span class="font-label-sm text-[10px] text-outline">Est. 28 Oct</span>
+</div>
+<p class="font-body-sm text-[11px] text-outline leading-tight mt-0.5">
+              15-Day statutory window before direct Ombudsman portal induction.
+            </p>
+</div>
+</div>
+<!-- State 7: Upcoming -->
+<div class="relative opacity-60">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-outline-variant"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">7. Ombudsman Hearing / Remedies</span>
+<span class="font-label-sm text-[10px] text-outline">Stage 2</span>
+</div>
+<p class="font-body-sm text-[11px] text-outline leading-tight mt-0.5">
+              Independent hearing under RPG Rules 2017 for legally binding award.
+            </p>
+</div>
+</div>
+<!-- State 8: Upcoming -->
+<div class="relative opacity-60">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-outline-variant"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">8. Resolved / Closed</span>
+<span class="font-label-sm text-[10px] text-outline">Direct NEFT</span>
+</div>
+<p class="font-body-sm text-[11px] text-outline leading-tight mt-0.5">
+              Direct fund recovery to client bank account with statutory interest.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Assigned Legal Custodian Profile Card -->
+<div class="px-gutter-mobile">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-secondary uppercase font-semibold tracking-wider text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> Assigned Case Custodian
+        </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px]">High Court Advocate</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up professional portrait of Adv. Meera Nambiar, senior Indian female insurance lawyer in professional advocate attire with black robe and white neckband, warm confident expression, studio lighting, corporate editorial aesthetic, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJoedfvtgWyEAb4rr5ZDCIPHk5S9d5pQfd2UuwS-e0Hlp38DyS-E1aSbsxvHqD_A_FyPXD06onX7JC9KaAiu1Gad33hkhSoPL64TrEjOLviEOh-VJhkvS9sWk-xec1tyXJheAAcWTtKVi8J-0DxyH_AmF6iS4hGO74UkeDTq7TkMEsie60t0CKyfcgVNgUZpHrsZ_CM5vRyLgRT1PKtZw8UZm4p179xyITRLCLpw">
+</div>
+<div class="flex flex-col min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-primary truncate">Adv. Meera Nambiar</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Insurance Ombudsman Specialist • 11 Yrs Exp</span>
+<span class="font-label-sm text-[11px] text-secondary font-medium">Chamber Bench: Karnataka &amp; Southern Regional Forum</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="h-11 px-3 rounded-lg bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95 transition-transform" href="tel:08044298100">
+<span class="material-symbols-outlined text-[18px] text-secondary">phone_in_talk</span>
+<span>Chamber Desk</span>
+</a>
+<button class="h-11 px-3 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 active:scale-95 transition-transform shadow-sm btn-press" id="open-query-btn">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span>Secure Query</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Evidentiary Vault Summary Card -->
+<div class="px-gutter-mobile">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">folder_special</span>
+<h4 class="font-headline-sm text-[17px] text-primary">Evidentiary Vault</h4>
+</div>
+<span class="font-label-sm text-[11px] text-outline">2 Documents Verified</span>
+</div>
+<div class="space-y-2">
+<!-- Document 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0">description</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary truncate">Indoor Hospital Case Papers</span>
+<span class="font-body-sm text-[11px] text-outline">Manipal Hospital • 42 Pages (Full OCR Verified)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-semibold whitespace-nowrap">
+            Admissible
+          </span>
+</div>
+<!-- Document 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[22px] flex-shrink-0">gavel</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary truncate">Repudiation Notice &amp; S.45 Audit</span>
+<span class="font-body-sm text-[11px] text-outline">Star Health Insurer Denial Letter #891A</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-semibold whitespace-nowrap">
+            Rebutted
+          </span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 active:scale-95 transition-transform btn-press" id="add-evidence-btn">
+<span class="material-symbols-outlined text-[16px] text-secondary">cloud_upload</span>
+<span>Upload Supporting Evidence / Bill</span>
+</button>
+</div>
+</div>
+<!-- Historical Resolved Claim Accordion -->
+<div class="px-gutter-mobile">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">history_edu</span>
+<h4 class="font-headline-sm text-[17px] text-primary">Archived &amp; Resolved Claims</h4>
+</div>
+<span class="font-label-sm text-[11px] text-outline">1 Resolved</span>
+</div>
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<button class="w-full p-3 text-left flex items-center justify-between focus:outline-none" id="accordion-trigger">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div>
+<span class="font-label-md text-label-md text-primary block">CS-CLM-2024-8192 • HDFC ERGO</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Settlement via Ombudsman Bangalore Consent Award</span>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="font-headline-sm text-[15px] text-secondary font-bold">₹1,12,500</span>
+<span class="material-symbols-outlined text-[20px] text-outline transition-transform duration-200" id="accordion-chevron">expand_more</span>
+</div>
+</button>
+<!-- Collapsible Content -->
+<div class="hidden px-3 pb-3 pt-1 space-y-2" id="accordion-content">
+<div class="p-2.5 rounded bg-surface-container-lowest space-y-1.5 text-[11px]">
+<div class="flex justify-between">
+<span class="text-outline">Dispute Classification:</span>
+<span class="font-medium text-primary">Pre-Existing Condition Misinterpretation</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Duration of Resolution:</span>
+<span class="font-medium text-primary">41 Calendar Days</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Disbursed Restitution:</span>
+<span class="font-bold text-secondary">₹1,12,500 (100% of Medical Claim)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Recovery Mode:</span>
+<span class="font-medium text-primary">Direct Client Bank NEFT Ref: ICIC908124</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-secondary text-[11px] font-medium pt-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Zero Retainer Fee Deducted. Policyholder Restored in Full.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Reassuring Chamber Assurance Banner -->
+<div class="px-gutter-mobile">
+<div class="p-space-md rounded-xl bg-primary text-on-primary shadow-lg flex flex-col space-y-2 relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-secondary/20 pointer-events-none"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[22px]">policy</span>
+<span class="font-headline-sm text-headline-sm text-on-primary">Statutory Policyholder Protection</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-primary-container leading-relaxed">
+        ClaimSathi Legal Advocacy guarantees independent Ombudsman representation under IRDAI Grievance Disposal Regulations 2024. Your insurer is bound by law to honor timely statutory reviews.
+      </p>
+<div class="pt-2 flex items-center justify-between text-[11px]">
+<span class="text-secondary-fixed font-medium">Ombudsman Desk: Bengaluru Bench</span>
+<span class="text-on-primary-container font-semibold">Toll-Free Legal Escort</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client Logic -->
+<script>
+  (function initClaimsTracker() {
+    // Accordion Toggle
+    const accordionBtn = document.getElementById('accordion-trigger');
+    const accordionContent = document.getElementById('accordion-content');
+    const chevron = document.getElementById('accordion-chevron');
+
+    if (accordionBtn && accordionContent && chevron) {
+      accordionBtn.addEventListener('click', () => {
+        const isHidden = accordionContent.classList.contains('hidden');
+        if (isHidden) {
+          accordionContent.classList.remove('hidden');
+          chevron.classList.add('rotate-180');
+        } else {
+          accordionContent.classList.add('hidden');
+          chevron.classList.remove('rotate-180');
+        }
+      });
+    }
+
+    // Interactive Toast triggers for touch feedback
+    const queryBtn = document.getElementById('open-query-btn');
+    if (queryBtn) {
+      queryBtn.addEventListener('click', () => {
+        alert("Direct Chamber Query Session opened with Adv. Meera Nambiar's desk. Connecting encrypted portal...");
+      });
+    }
+
+    const dossierBtn = document.getElementById('view-dossier-btn');
+    if (dossierBtn) {
+      dossierBtn.addEventListener('click', () => {
+        alert("Downloading Compiled Legal Dossier (Section 45 Statutory Defense Brief, 18 pages).");
+      });
+    }
+
+    const evidenceBtn = document.getElementById('add-evidence-btn');
+    if (evidenceBtn) {
+      evidenceBtn.addEventListener('click', () => {
+        alert("Vault Upload: Please select digital records (PDF, JPG under 25MB) with hospital seal.");
+      });
+    }
+
+    const escalateBtn = document.getElementById('escalate-toast-btn');
+    if (escalateBtn) {
+      escalateBtn.addEventListener('click', () => {
+        alert("Ombudsman Rule 17 Petition draft is pre-populated and ready for instant submission if GRO fails to resolve in 4 days.");
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low px-gutter-mobile py-space-sm"><div class="max-w-md mx-auto text-center space-y-1"><p class="font-label-sm text-[11px] text-outline leading-tight">ClaimSathi Legal Advocacy Chambers • Regulated Advisory • Strict Non-Retainer Model</p><p class="font-label-sm text-[10px] text-outline/80 leading-tight pb-1">Disclaimer: ClaimSathi acts as an independent policyholder legal advocate. We are not an insurance company.</p></div></footer><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="nav-tap-effect flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-transform duration-200" data-path="client-home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-[11px]">Home</span></a><a aria-current="page" class="nav-tap-effect flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-secondary font-semibold transition-transform duration-200" data-path="my-claims" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[11px]">Claims</span></a><a class="nav-tap-effect flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-secondary hover:text-secondary transition-transform duration-200 active:scale-95" data-path="register-new-claim" href="#"><span class="material-symbols-outlined text-[26px]">add_circle</span><span class="font-label-sm text-[11px]">File Claim</span></a><a class="nav-tap-effect flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-transform duration-200" data-path="transparent-fees" href="#"><span class="material-symbols-outlined text-[22px]">verified</span><span class="font-label-sm text-[11px]">Fees</span></a><a class="nav-tap-effect flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-transform duration-200" data-path="client-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-[11px]">Portal</span></a></div></nav><script>const drawer=document.getElementById('client-drawer');const toggle=document.getElementById('client-drawer-toggle');const close=document.getElementById('client-drawer-close');const backdrop=document.getElementById('client-drawer-backdrop');function openDrawer(){drawer.classList.remove('pointer-events-none','opacity-0');drawer.classList.add('opacity-100');drawer.querySelector('nav').classList.remove('-translate-x-full');}function closeDrawer(){drawer.classList.add('pointer-events-none','opacity-0');drawer.classList.remove('opacity-100');drawer.querySelector('nav').classList.add('-translate-x-full');}toggle?.addEventListener('click',openDrawer);close?.addEventListener('click',closeDrawer);backdrop?.addEventListener('click',closeDrawer);</script>
+
+</body></html>
