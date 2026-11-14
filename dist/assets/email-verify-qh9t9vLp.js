@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";var t;(t=document.getElementById("login-link"))==null||t.addEventListener("click",e=>{e.preventDefault(),window.location.href="/auth/login.html"});var n;(n=document.getElementById("back-home"))==null||n.addEventListener("click",e=>{e.preventDefault(),window.location.href="/"});

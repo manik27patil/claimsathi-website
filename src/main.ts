@@ -16,10 +16,10 @@ const desktopPages: { path: string; label: string }[] = [
   { path: "how-we-work", label: "How We Work" },
   { path: "fees", label: "Transparent Fees" },
   { path: "contact", label: "Contact" },
-  { path: "login", label: "Login" },
-  { path: "register-a-claim", label: "Register a Claim" },
+  { path: "auth-login", label: "Login" },
+  { path: "auth-register", label: "Register" },
+  { path: "auth-dashboard", label: "Dashboard" },
   { path: "registration-confirmation", label: "Confirmation" },
-  { path: "dashboard", label: "Dashboard" },
   { path: "my-claims", label: "My Claims" },
   { path: "profile-completion", label: "Profile Completion" },
   { path: "admin-portal", label: "Admin Portal" },
@@ -145,7 +145,32 @@ const crossMap: Record<string, string> = {
   "fee-reconciliation-mobile": "fee-reconciliation",
 };
 
+// Auth routes that should redirect to full Vite pages instead of iframe
+const authRedirects: Record<string, string> = {
+  "auth-login": "/auth/login.html",
+  "auth-register": "/auth/register.html",
+  "auth-dashboard": "/auth/dashboard.html",
+  "auth-forgot": "/auth/forgot-password.html",
+  "auth-reset": "/auth/reset-password.html",
+  "auth-verify": "/auth/email-verify.html",
+};
+
+// Maps data-path values from original design comps to auth page routes
+const authPathMap: Record<string, string> = {
+  login: "auth-login",
+  "register-a-claim": "auth-register",
+  "register-new-claim": "auth-register",
+  dashboard: "auth-dashboard",
+  "client-dashboard": "auth-dashboard",
+};
+
 function navigateTo(path: string) {
+  // Check if this is an auth route that needs a full-page redirect
+  if (authRedirects[path]) {
+    window.location.href = authRedirects[path];
+    return;
+  }
+
   currentPath = path;
   const route = resolveRoute(path);
   currentMode = route.group;
@@ -183,6 +208,11 @@ function updateFrameSize() {
 window.addEventListener("message", (e) => {
   if (e.data && e.data.type === "cs-navigate" && e.data.path) {
     const path = e.data.path;
+    // Check if this is an auth-related path from the design comps
+    if (authPathMap[path]) {
+      navigateTo(authPathMap[path]);
+      return;
+    }
     // If the clicked link maps to a page in the other mode, cross over
     if (crossMap[path]) {
       navigateTo(crossMap[path]);

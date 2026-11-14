@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-dim": "#cfdaf2", "surface": "#f9f9ff", "tertiary-fixed": "#ffdea0", "surface-tint": "#4b607b", "on-error-container": "#93000a", "primary": "#001125", "on-tertiary-fixed-variant": "#5a430f", "surface-variant": "#d8e3fb", "inverse-surface": "#263143", "on-primary": "#ffffff", "on-secondary-container": "#006f66", "on-secondary-fixed": "#00201d", "primary-fixed-dim": "#b3c8e8", "background": "#f9f9ff", "tertiary-fixed-dim": "#e3c282", "on-surface-variant": "#44474d", "on-background": "#111c2d", "surface-container-high": "#dee8ff", "outline": "#74777e", "on-primary-fixed-variant": "#344863", "on-secondary-fixed-variant": "#005049", "surface-container": "#e7eeff", "error": "#ba1a1a", "secondary": "#006a62", "secondary-fixed-dim": "#78d7cb", "secondary-fixed": "#95f3e7", "on-tertiary": "#ffffff", "tertiary": "#180f00", "tertiary-container": "#322300", "surface-container-low": "#f0f3ff", "on-primary-container": "#798eac", "on-secondary": "#ffffff", "surface-container-highest": "#d8e3fb", "surface-container-lowest": "#ffffff", "secondary-container": "#92f0e4", "primary-container": "#10263f", "inverse-primary": "#b3c8e8", "primary-fixed": "#d3e4ff", "error-container": "#ffdad6", "on-tertiary-container": "#a5894e", "outline-variant": "#c4c6ce", "surface-bright": "#f9f9ff", "on-tertiary-fixed": "#261a00", "inverse-on-surface": "#ecf1ff", "on-primary-fixed": "#051c35", "on-error": "#ffffff", "on-surface": "#111c2d" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-sm": "0.5rem", "margin": "3rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-2xl": "4rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "headline-md": ["Merriweather"], "headline-xl-mobile": ["Merriweather"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Merriweather"], "body-md": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"], "headline-lg": ["Merriweather"], "body-lg": ["Plus Jakarta Sans"], "headline-xl": ["Merriweather"], "display-lg-mobile": ["Merriweather"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Merriweather"], "label-sm": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["22px", { lineHeight: "32px", fontWeight: "700" }], "headline-xl-mobile": ["26px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "display-lg": ["48px", { lineHeight: "60px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-xl": ["18px", { lineHeight: "30px", fontWeight: "400" }], "headline-lg": ["28px", { lineHeight: "38px", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-xl": ["36px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "700" }], "display-lg-mobile": ["32px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "700" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-full"><header class="fixed top-0 w-full z-50 pt-safe bg-primary text-on-primary shadow-[0_2px_12px_rgba(0,17,37,0.12)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Operations Navigation" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-primary hover:bg-primary-container active:bg-surface-tint/20 transition-colors" id="admin-drawer-toggle"><span class="material-symbols-outlined text-[24px]">dashboard_customize</span></button><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary-fixed text-[18px]">shield</span><span class="font-headline-sm text-headline-sm text-on-primary leading-none">Chambers Ops</span></div><span class="font-label-sm text-[10px] text-surface-variant/80 uppercase tracking-widest">Admin Portal</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm"><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span><span class="font-label-sm text-[11px]">Cashless Desk</span></div><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center border border-primary-fixed-dim/30"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0" id="admin-drawer"><div class="absolute inset-0 bg-primary/60 backdrop-blur-sm" id="admin-drawer-backdrop"></div><nav class="absolute top-0 left-0 bottom-0 w-4/5 max-w-xs bg-primary text-on-primary p-space-lg flex flex-col justify-between shadow-2xl transform -translate-x-full transition-transform duration-300" data-active-classes="bg-primary-container text-secondary-fixed font-semibold"><div class="space-y-space-md"><div class="flex items-center justify-between pb-space-sm border-b border-primary-container"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed text-[24px]">corporate_fare</span><span class="font-headline-sm text-headline-sm text-on-primary">Ops Chambers</span></div><button class="w-11 h-11 flex items-center justify-center rounded-lg text-primary-fixed-dim hover:bg-primary-container" id="admin-drawer-close"><span class="material-symbols-outlined">close</span></button></div><div class="flex flex-col gap-1"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-surface-variant font-label-lg hover:bg-primary-container" data-path="admin-dossier" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Chambers Overview</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-surface-variant font-label-lg hover:bg-primary-container" data-path="emergency-hospital-cashless" href="#"><span class="material-symbols-outlined text-[20px] text-error-container">emergency</span><span>Hospital Cashless Queue</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-surface-variant font-label-lg hover:bg-primary-container" data-path="advocacy-case-action" href="#"><span class="material-symbols-outlined text-[20px]">gavel</span><span>Live Legal Actions</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-surface-variant font-label-lg hover:bg-primary-container" data-path="fee-reconciliation-ledger" href="#"><span class="material-symbols-outlined text-[20px] text-secondary-fixed">account_balance_wallet</span><span>Fee Reconciliation &amp; Ledger</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-surface-variant font-label-lg hover:bg-primary-container" data-path="ombudsman-appeals" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span>Ombudsman Appeals</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-surface-variant font-label-lg hover:bg-primary-container" data-path="advisory-roster" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Advocate Roster</span></a></div></div><div class="pt-space-md border-t border-primary-container space-y-2"><div class="flex items-center justify-between text-surface-variant"><span class="font-label-sm text-[11px]">Secure Ops Mode</span><span class="font-label-sm text-secondary-fixed text-[11px]">Active</span></div></div></nav></div><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Financial Ops Context Section -->
+<section class="px-margin-mobile pt-space-md pb-space-lg bg-surface">
+<!-- Live Escrow Trust Badge -->
+<div class="flex flex-wrap items-center gap-space-xs mb-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary/10 text-secondary font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+        FINANCIAL OPERATIONS &amp; ESCROW
+      </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm truncate max-w-full">
+<span class="material-symbols-outlined text-[13px] text-secondary">verified_user</span>
+        Safe Escrow #9120 • GSTIN: 07AABCC8912M1Z8
+      </span>
+</div>
+<!-- Title & Authoritative Subtitle -->
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight mb-space-xs">
+      Fee Reconciliation &amp; Settlement Ledger
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+      End-to-end accounting of forensic scrutiny fees (<span class="font-semibold text-on-surface">₹500 fixed</span>), advance retainer float (<span class="font-semibold text-secondary">₹4,500 100% offset</span>), direct insurer disbursements, and post-recovery <span class="font-semibold text-primary">15% success fee</span> reconciliations.
+    </p>
+<!-- Operational Quick Actions -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full h-12 flex items-center justify-center gap-2 rounded-lg bg-secondary text-on-secondary font-label-lg shadow-sm hover:opacity-95 active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+<span>+ Record Bank Settlement (NEFT/RTGS)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-11 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container text-primary font-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+<span>Audit Export (CSV)</span>
+</button>
+<button class="h-11 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container text-primary font-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Generate GST Bill</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Financial KPI Metrics (2x2 Grid + Priority Full Width) -->
+<section class="px-margin-mobile pb-space-lg space-y-space-sm">
+<!-- Primary Capital Reclaimed KPI Card -->
+<div class="relative overflow-hidden rounded-xl bg-primary text-on-primary p-space-md shadow-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-surface-variant/80 uppercase tracking-wider block mb-1">Total Reclaimed Capital</span>
+<div class="font-headline-lg text-headline-lg tracking-tight text-on-primary flex items-baseline gap-2">
+            ₹12.65 Cr
+            <span class="font-label-sm text-secondary-fixed bg-secondary/30 px-2 py-0.5 rounded-full font-semibold">91.4% Win Rate</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+</div>
+<div class="mt-3 pt-3 border-t border-primary-container/70 flex items-center justify-between text-surface-variant font-label-sm">
+<span>64 Completed Claims</span>
+<span class="text-secondary-fixed">Direct Insurer NEFT</span>
+</div>
+</div>
+<!-- 2x2 Metric Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Success Fees Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-on-surface-variant">Realized Fees (15%)</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">payments</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary mb-1">₹1,89.75 L</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Post ₹4,500 offset &amp; TDS 194J reconciled</p>
+</div>
+</div>
+<!-- Segregated Escrow Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-on-surface-variant">Client Escrow Safe</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary mb-1">₹18,45,000</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">41 Retainers (100% refundable on zero win)</p>
+</div>
+</div>
+<!-- Pending Remittance Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-on-surface-variant">Awaiting Client NEFT</span>
+<span class="material-symbols-outlined text-[18px] text-error">pending_actions</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-error mb-1">₹4,12,500</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">3 Settled awards (Avg: 4.2d aging)</p>
+</div>
+</div>
+<!-- Initial Forensic Scrutiny Fee Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-on-surface-variant">Scrutiny Inflow</span>
+<span class="material-symbols-outlined text-[18px] text-primary">fact_check</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary mb-1">₹74,000</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">148 Audits @ ₹500 non-refundable</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter & Search Controls -->
+<section class="px-margin-mobile pb-space-md">
+<div class="flex flex-col gap-space-xs">
+<!-- Search Input -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/50 shadow-sm" placeholder="Search Case ID (CS-CLM-...), Claimant, Insurer..." type="text"/>
+</div>
+<!-- Horizontal Filter Badges -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 -mx-margin-mobile px-margin-mobile no-scrollbar">
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm font-semibold shadow-xs" type="button">
+          All Transactions (64)
+        </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm hover:bg-surface-container-high transition-colors" type="button">
+          Q3 FY24-25
+        </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm hover:bg-surface-container-high transition-colors" type="button">
+          All Underwriters
+        </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm hover:bg-surface-container-high transition-colors" type="button">
+          Ombudsman Awards
+        </button>
+</div>
+</div>
+</section>
+<!-- Active Case Settlement Voucher Inspection Card (Featured Spotlight) -->
+<section class="px-margin-mobile pb-space-lg">
+<div class="rounded-xl bg-surface-container-lowest shadow-md overflow-hidden">
+<!-- Header Band -->
+<div class="bg-primary text-on-primary p-space-md">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm tracking-wider uppercase text-secondary-fixed">Case Settlement Voucher</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+            #REC-2024-089
+          </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-primary tracking-tight">
+          CS-CLM-2024-8192 — Dr. Arvind Patel
+        </h2>
+<div class="flex items-center gap-1.5 text-surface-variant font-body-sm mt-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">shield</span>
+<span>HDFC ERGO General Insurance • Claim Repudiation Overturned</span>
+</div>
+</div>
+<div class="p-space-md space-y-space-md">
+<!-- Section 1: Direct Inflow Verification -->
+<div class="rounded-lg bg-surface-container-low p-space-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_balance_wallet</span>
+<span class="font-label-md text-primary uppercase tracking-wide">1. Policyholder Inflow Verification</span>
+</div>
+<span class="font-label-sm text-secondary font-semibold">Bank API Matched</span>
+</div>
+<div class="space-y-1.5 font-body-md text-body-md">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Principal Settlement Disbursed</span>
+<span class="font-semibold text-on-surface">₹1,12,500.00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>8% Penal Interest Award</span>
+<span class="font-semibold text-secondary">₹4,200.00</span>
+</div>
+<div class="pt-2 border-t border-surface-container-high flex justify-between items-baseline font-semibold">
+<span class="text-primary">Total Remitted to Policyholder</span>
+<span class="text-headline-sm font-headline-sm text-primary">₹1,16,700.00</span>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-surface-container-high/60 flex items-center justify-between font-label-sm text-on-surface-variant">
+<span class="truncate">NEFT Ref: <span class="text-on-surface font-mono">HDFC890123891</span></span>
+<span class="shrink-0 text-secondary font-semibold">Credited 14 Nov 2024</span>
+</div>
+</div>
+<!-- Section 2: Fee Computation & Advance Offset (With Exact Math) -->
+<div class="rounded-lg bg-surface-container-low p-space-sm">
+<div class="flex items-center gap-1.5 mb-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">calculate</span>
+<span class="font-label-md text-primary uppercase tracking-wide">2. Chambers Fee &amp; Offset Ledger</span>
+</div>
+<div class="space-y-2 text-body-sm font-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Stage 1 Scrutiny Fee (Fixed Paid)</span>
+<span class="text-on-surface font-medium">₹500.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Stage 1 Retainer Float Deposited</span>
+<span class="text-secondary font-medium">₹4,500.00 (In Trust)</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Gross Recovery Basis (Principal + Int)</span>
+<span class="text-on-surface font-medium">₹1,16,700.00</span>
+</div>
+<div class="flex justify-between text-on-surface font-medium pt-1 border-t border-surface-container-high/70">
+<span>Gross Success Advisory Fee (15.00%)</span>
+<span>₹17,505.00</span>
+</div>
+<div class="flex justify-between text-secondary font-medium">
+<span>Less: 100% Advance Retainer Credit</span>
+<span>-₹4,500.00</span>
+</div>
+<div class="flex justify-between text-on-surface font-medium">
+<span>Adjusted Chambers Advisory Fee</span>
+<span>₹13,005.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Add: GST @ 18% (SAC 998211 Legal Service)</span>
+<span>₹2,340.90</span>
+</div>
+</div>
+<!-- Highlight Invoice Callout -->
+<div class="mt-3 p-3 rounded-lg bg-primary text-on-primary">
+<div class="flex justify-between items-baseline">
+<span class="font-label-sm text-surface-variant/90 uppercase tracking-wider">Final Tax Invoice Due</span>
+<div class="font-headline-md text-headline-md text-secondary-fixed tracking-tight">₹15,345.90</div>
+</div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed">task_alt</span>
+<span>100% Retainer Float deducted before billing</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Audit Reconciliation & CA Clearance -->
+<div class="rounded-lg bg-surface-container p-space-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">approval</span>
+<span class="font-label-md text-primary uppercase tracking-wide">3. Bank Receipt &amp; CA Clearance</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+              AUDIT-CLEARED
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-body-sm font-body-sm mb-2">
+<div>
+<span class="text-on-surface-variant text-[11px] block">Client NEFT Inflow</span>
+<span class="font-semibold text-primary">₹15,346.00</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[11px] block">Recon Variance</span>
+<span class="font-semibold text-secondary">+₹0.10 (Round-off)</span>
+</div>
+<div class="col-span-2">
+<span class="text-on-surface-variant text-[11px] block">SBI Bank UTR Reference</span>
+<span class="font-mono font-medium text-primary text-body-sm">SBIN0048192471</span>
+</div>
+</div>
+<div class="pt-2 border-t border-surface-variant flex items-center justify-between text-on-surface-variant font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">shield_with_heart</span>
+<span>Sen &amp; Co. CAs (FRN 01284N)</span>
+</div>
+<span class="text-primary font-semibold">100% MATCH</span>
+</div>
+</div>
+<!-- Voucher Actions -->
+<div class="flex flex-col gap-space-xs pt-1">
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-11 flex items-center justify-center gap-1.5 rounded-lg bg-primary text-on-primary font-label-md hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Tax Invoice PDF</span>
+</button>
+<button class="h-11 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-high text-primary font-label-md hover:bg-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">chat</span>
+<span>WhatsApp Receipt</span>
+</button>
+</div>
+<button class="h-10 flex items-center justify-center gap-1.5 rounded-lg text-outline font-label-md hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Voucher Cryptographically Locked &amp; Archived</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Master Settlement Register (Mobile Case Cards) -->
+<section class="px-margin-mobile pb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-primary">Master Settlement Register</h2>
+<span class="font-label-sm text-on-surface-variant">Showing 3 Recent</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Card 1: Star Health Case - Awaiting NEFT -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-2 mb-2">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-secondary font-semibold font-mono">CS-CLM-2025-0419</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-body-sm text-on-surface-variant">Star Health</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-0.5">Rajesh Kumar Sharma</h3>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm font-semibold shrink-0">
+            Pending Client NEFT
+          </span>
+</div>
+<div class="grid grid-cols-2 gap-2 p-2.5 rounded-lg bg-surface-container-low mb-3">
+<div>
+<span class="font-label-sm text-on-surface-variant block text-[11px]">Direct Award</span>
+<span class="font-semibold text-primary font-body-md">₹5,80,000</span>
+</div>
+<div>
+<span class="font-label-sm text-on-surface-variant block text-[11px]">Original Claim</span>
+<span class="text-on-surface-variant font-body-md line-through">₹6,50,000</span>
+</div>
+<div>
+<span class="font-label-sm text-on-surface-variant block text-[11px]">15% Success Fee</span>
+<span class="font-semibold text-on-surface font-body-md">₹87,000</span>
+</div>
+<div>
+<span class="font-label-sm text-secondary block text-[11px]">Advance Offset</span>
+<span class="font-semibold text-secondary font-body-md">-₹4,500</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 mb-3">
+<div>
+<span class="font-label-sm text-on-surface-variant block text-[11px]">Net Tax Invoice Due</span>
+<span class="font-headline-sm text-headline-sm text-error">₹97,350 <span class="text-[12px] font-normal text-on-surface-variant">(inc GST)</span></span>
+</div>
+<span class="font-label-sm text-on-surface-variant bg-surface-container px-2 py-1 rounded">
+            5D Elapsed • Direct Credited 09 Jan
+          </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-10 flex items-center justify-center gap-1 rounded-lg bg-primary text-on-primary font-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">notifications_active</span>
+<span>Send Reminder</span>
+</button>
+<button class="h-10 flex items-center justify-center gap-1 rounded-lg bg-surface-container text-primary font-label-md" type="button">
+<span>Inspect Voucher</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Max Life Case - Ongoing Review -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-2 mb-2">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-secondary font-semibold font-mono">CS-CLM-2024-7710</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-body-sm text-on-surface-variant">Max Life Insurance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-0.5">Smt. Meenakshi Sundaram</h3>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm font-semibold shrink-0">
+            GRO Re-Scrutiny
+          </span>
+</div>
+<div class="space-y-1.5 text-body-sm font-body-sm mb-3">
+<div class="flex justify-between text-on-surface-variant">
+<span>Disputed Death Claim</span>
+<span class="font-semibold text-primary">₹25,00,000.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Insurer Provisional Counter-Offer</span>
+<span class="font-semibold text-secondary">₹22,50,000.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Advance Retainer in Escrow Safe</span>
+<span class="font-medium text-on-surface">₹4,500 Held (Safe Float #9120)</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Stage: Grievance Officer Escalation</span>
+<span class="text-secondary font-semibold">15% Fee Inapplicable Until Final Credit</span>
+</div>
+</div>
+<!-- Card 3: Care Health - 100% Retainer Refunded -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-2 mb-2">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-secondary font-semibold font-mono">CS-CLM-2024-6502</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-body-sm text-on-surface-variant">Care Health Insurance</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-0.5">Rajiv Mehra</h3>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm font-semibold shrink-0">
+<span class="material-symbols-outlined text-[13px]">replay</span>
+            100% Float Returned
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2.5">
+          Ombudsman Dismissed Excl. (OPD Infertility Clause confirmed valid by Council).
+        </p>
+<div class="grid grid-cols-2 gap-2 p-2.5 rounded-lg bg-surface-container-low mb-2.5 text-body-sm font-body-sm">
+<div>
+<span class="font-label-sm text-on-surface-variant block text-[11px]">Disputed Claim</span>
+<span class="font-medium text-primary">₹1,85,000</span>
+</div>
+<div>
+<span class="font-label-sm text-on-surface-variant block text-[11px]">Final Award</span>
+<span class="font-medium text-outline">₹0.00 (Nil)</span>
+</div>
+<div>
+<span class="font-label-sm text-on-surface-variant block text-[11px]">Success Fee Charged</span>
+<span class="font-semibold text-secondary">₹0.00 (Zero)</span>
+</div>
+<div>
+<span class="font-label-sm text-on-surface-variant block text-[11px]">Forensic Scrutiny</span>
+<span class="font-medium text-primary">₹500 (Retained)</span>
+</div>
+</div>
+<!-- Refund Proof Banner -->
+<div class="p-2.5 rounded-lg bg-surface-container flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-semibold text-secondary">₹4,500 Full Retainer Refunded</span>
+<span class="font-label-sm text-on-surface-variant">4 Days (SLA: 30D)</span>
+</div>
+<div class="font-mono text-[11px] text-on-surface-variant truncate">
+            Razorpay Payout UTR: RZP901844910
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Escrow Safety & Zero-Recovery SLA Compliance Monitor Card -->
+<section class="px-margin-mobile pb-space-lg">
+<div class="rounded-xl bg-surface-container p-space-md shadow-sm">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[22px] text-secondary">security</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">
+          Escrow Safety &amp; Zero-Recovery Refund SLA
+        </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+        Every ₹4,500 advance float sits in a non-interest client trust account. If an award cannot be salvaged, funds are reversed immediately with zero clawbacks.
+      </p>
+<!-- Key SLA Stats -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-sm">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest">
+<span class="font-label-sm text-on-surface-variant block text-[11px]">Adherence Rate</span>
+<span class="font-headline-sm text-headline-sm text-secondary">100% SLA</span>
+<span class="font-body-sm text-on-surface-variant text-[11px] block mt-0.5">Average 3.8 days turnaround</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest">
+<span class="font-label-sm text-on-surface-variant block text-[11px]">Audit Certification</span>
+<span class="font-headline-sm text-headline-sm text-primary">M/s Sen &amp; Co.</span>
+<span class="font-body-sm text-on-surface-variant text-[11px] block mt-0.5">Zero escrow deficit certified</span>
+</div>
+</div>
+<!-- Trust Protocol Box -->
+<div class="rounded-lg bg-surface-container-lowest p-space-sm space-y-1.5 text-body-sm font-body-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span class="text-on-surface"><strong>Stage 1 Inception:</strong> ₹500 scrutiny + ₹4,500 advance float (held in trust safe).</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span class="text-on-surface"><strong>Stage 2 Recovery:</strong> 15% success fee strictly triggered post-credit to claimant bank account.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span class="text-on-surface"><strong>100% Offset:</strong> Full ₹4,500 float is auto-deducted on final invoice. Zero hidden charges.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- IRDAI Grievance Advisory Compliance & Non-Holding Assurance Note -->
+<section class="px-margin-mobile pb-space-2xl">
+<div class="rounded-xl bg-surface-container-high/60 p-space-md">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[24px] text-primary shrink-0 mt-0.5">gavel</span>
+<div class="space-y-1">
+<h3 class="font-label-lg text-primary font-semibold">
+            IRDAI Policyholder Protection Safeguard
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            In compliance with IRDAI (Protection of Policyholders’ Interests) Regulations, ClaimSathi operates strictly as an independent legal-medico advocacy firm. <strong>Chambers never intercepts or holds insurer claim disbursements.</strong> All claim funds remit directly from the insurer or Ombudsman registrar into the verified bank account of the policyholder.
+          </p>
+<div class="pt-2 flex items-center justify-between text-label-sm font-label-sm text-outline">
+<span>Escrow Oversight: IndusInd Bank Custody</span>
+<span class="text-primary font-medium">IRDAI/ADV/2024</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interactions for mobile ledger cards
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      // Visual feedback tap state
+      this.classList.add('opacity-80');
+      setTimeout(() => this.classList.remove('opacity-80'), 150);
+    });
+  });
+</script></main><script>const aDrawer=document.getElementById('admin-drawer');const aToggle=document.getElementById('admin-drawer-toggle');const aClose=document.getElementById('admin-drawer-close');const aBackdrop=document.getElementById('admin-drawer-backdrop');function openAdminDrawer(){aDrawer.classList.remove('pointer-events-none','opacity-0');aDrawer.classList.add('opacity-100');aDrawer.querySelector('nav').classList.remove('-translate-x-full');}function closeAdminDrawer(){aDrawer.classList.add('pointer-events-none','opacity-0');aDrawer.classList.remove('opacity-100');aDrawer.querySelector('nav').classList.add('-translate-x-full');}aToggle?.addEventListener('click',openAdminDrawer);aClose?.addEventListener('click',closeAdminDrawer);aBackdrop?.addEventListener('click',closeAdminDrawer);</script></body></html>

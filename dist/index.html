@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClaimSathi — Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --cs-bg: #0f172a;
+      --cs-panel: #1e293b;
+      --cs-border: #334155;
+      --cs-text: #e2e8f0;
+      --cs-text-dim: #94a3b8;
+      --cs-accent: #006a62;
+      --cs-accent-light: #14b8a6;
+      --cs-active: #0d9488;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--cs-bg);
+      color: var(--cs-text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top Bar */
+    .cs-topbar {
+      background: var(--cs-panel);
+      border-bottom: 1px solid var(--cs-border);
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 56px;
+      flex-shrink: 0;
+    }
+    .cs-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+    .cs-brand-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--cs-accent-light);
+    }
+    .cs-brand-sub {
+      font-size: 11px;
+      color: var(--cs-text-dim);
+      font-weight: 400;
+      margin-left: 4px;
+    }
+    .cs-divider {
+      width: 1px; height: 24px;
+      background: var(--cs-border);
+    }
+    .cs-mode-toggle {
+      display: flex;
+      gap: 2px;
+      background: var(--cs-bg);
+      border-radius: 8px;
+      padding: 3px;
+    }
+    .cs-mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--cs-text-dim);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .cs-mode-btn:hover { color: var(--cs-text); }
+    .cs-mode-btn-active {
+      background: var(--cs-accent);
+      color: #fff;
+    }
+    .cs-page-info {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      text-align: right;
+    }
+    .cs-page-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cs-text);
+    }
+    .cs-page-desc {
+      font-size: 11px;
+      color: var(--cs-text-dim);
+    }
+    .cs-mobile-expand {
+      display: none;
+      background: var(--cs-bg);
+      border: 1px solid var(--cs-border);
+      color: var(--cs-text-dim);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+    .cs-mobile-expand:hover { color: var(--cs-text); border-color: var(--cs-accent); }
+
+    /* Page Nav */
+    .cs-pagenav {
+      background: var(--cs-panel);
+      border-bottom: 1px solid var(--cs-border);
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+      flex-shrink: 0;
+      height: 44px;
+    }
+    .cs-pagenav::-webkit-scrollbar { height: 4px; }
+    .cs-pagenav::-webkit-scrollbar-thumb { background: var(--cs-border); border-radius: 2px; }
+    .cs-nav-btn {
+      background: transparent;
+      border: none;
+      color: var(--cs-text-dim);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .cs-nav-btn:hover { color: var(--cs-text); background: var(--cs-bg); }
+    .cs-nav-btn-active {
+      color: var(--cs-accent-light);
+      background: rgba(20, 184, 166, 0.1);
+    }
+
+    /* Content Area */
+    .cs-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow: auto;
+      padding: 0;
+      background: #1a1a2e;
+    }
+    .cs-frame-wrapper {
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    .cs-frame-mobile {
+      width: 390px;
+      height: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    }
+    .cs-frame-mobile-expanded {
+      width: 100%;
+    }
+    .cs-frame-desktop {
+      width: 100%;
+      height: 100%;
+    }
+    #content-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .cs-page-info { display: none; }
+      .cs-brand-sub { display: none; }
+    }
+  </style>
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+  <script type="module" crossorigin src="/assets/main-BcYK1zEA.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+</head>
+<body>
+  <div class="cs-topbar">
+    <div class="cs-brand">
+      <span class="cs-brand-dot"></span>
+      ClaimSathi
+      <span class="cs-brand-sub">Preview Shell</span>
+    </div>
+    <div class="cs-divider"></div>
+    <div class="cs-mode-toggle">
+      <button class="cs-mode-btn cs-mode-btn-active" id="view-desktop">Desktop</button>
+      <button class="cs-mode-btn" id="view-mobile">Mobile</button>
+    </div>
+    <button class="cs-mobile-expand" id="mobile-frame-toggle">
+      <span>Expand Width</span>
+    </button>
+    <div class="cs-page-info">
+      <span class="cs-page-label" id="page-label">Home</span>
+      <span class="cs-page-desc" id="page-description">Landing page</span>
+    </div>
+  </div>
+
+  <div class="cs-pagenav" id="page-nav"></div>
+
+  <div class="cs-content">
+    <div class="cs-frame-wrapper cs-frame-desktop" id="frame-wrapper">
+      <iframe id="content-frame" title="ClaimSathi Page Preview"></iframe>
+    </div>
+  </div>
+
+</body>
+</html>

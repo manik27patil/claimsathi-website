@@ -1,0 +1,853 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","primary-fixed-dim":"#b3c8e8","surface-container":"#e7eeff","surface-dim":"#cfdaf2","on-primary":"#ffffff","secondary-fixed-dim":"#78d7cb","surface-tint":"#4b607b","primary-container":"#10263f","on-primary-container":"#798eac","tertiary-fixed":"#ffdea0","on-error":"#ffffff","on-primary-fixed":"#051c35","primary-fixed":"#d3e4ff","tertiary-fixed-dim":"#e3c282","on-surface":"#111c2d","error":"#ba1a1a","on-tertiary-container":"#a5894e","on-primary-fixed-variant":"#344863","on-tertiary-fixed-variant":"#5a430f","surface-container-low":"#f0f3ff","on-background":"#111c2d","tertiary":"#180f00","surface-container-lowest":"#ffffff","surface-container-highest":"#d8e3fb","outline-variant":"#c4c6ce","on-secondary-container":"#006f66","tertiary-container":"#322300","background":"#f9f9ff","on-tertiary-fixed":"#261a00","inverse-on-surface":"#ecf1ff","on-secondary-fixed":"#00201d","secondary":"#006a62","error-container":"#ffdad6","outline":"#74777e","on-secondary":"#ffffff","surface-variant":"#d8e3fb","secondary-container":"#92f0e4","inverse-surface":"#263143","on-surface-variant":"#44474d","on-error-container":"#93000a","inverse-primary":"#b3c8e8","primary":"#001125","on-secondary-fixed-variant":"#005049","surface":"#f9f9ff","secondary-fixed":"#95f3e7","surface-container-high":"#dee8ff","surface-bright":"#f9f9ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","space-2xl":"4rem","space-xs":"0.25rem","gutter-mobile":"1rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-lg":"1.5rem","space-xl":"2.5rem","margin":"3rem","space-md":"1rem"},"fontFamily":{"display-lg":["Merriweather"],"headline-xl":["Merriweather"],"body-md":["Plus Jakarta Sans"],"display-lg-mobile":["Merriweather"],"body-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Merriweather"],"body-xl":["Plus Jakarta Sans"],"headline-sm":["Merriweather"],"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Merriweather"],"headline-md":["Merriweather"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"display-lg":["48px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-lg-mobile":["32px",{"lineHeight":"42px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl-mobile":["26px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-xl":["18px",{"lineHeight":"30px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"38px","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"32px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-primary-container text-on-primary shadow-[0_4px_20px_-2px_rgba(16,38,63,0.18)]"><div class="h-20 w-full px-space-lg xl:px-space-xl flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight">ClaimSathi</span><span class="font-label-sm text-label-sm tracking-wider uppercase text-on-primary-container">Advocacy Chambers</span></div><span class="hidden lg:inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-surface-container-highest/20 text-primary-fixed font-label-sm text-label-sm border border-primary-fixed/20">CHAMBERS &amp; OPERATIONS ADMIN</span></div><nav class="hidden xl:flex items-center gap-1.5 p-1 bg-primary/40 rounded-lg" data-active-classes="bg-surface-container-lowest text-primary font-bold shadow-[0_2px_8px_rgba(0,0,0,0.12)]"><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-primary-container hover:text-on-primary hover:bg-primary-container/80 transition-all" data-path="overview-and-triage" href="#">Overview &amp; Triage</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary font-bold shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-all" data-path="all-claims-register" href="#">All Claims Register</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-primary-container hover:text-on-primary hover:bg-primary-container/80 transition-all" data-path="statutory-escalations" href="#">Statutory Escalations (GRO &amp; Ombudsman)</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-primary-container hover:text-on-primary hover:bg-primary-container/80 transition-all" data-path="fee-reconciliation" href="#">Fee Reconciliation</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-primary-container hover:text-on-primary hover:bg-primary-container/80 transition-all" data-path="policyholders-and-clients" href="#">Policyholders &amp; Clients</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden 2xl:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest/10"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-label-sm text-label-sm text-secondary-fixed">IRDAI Regulatory Vault: Sync Active</span></div><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-error-container text-on-error-container"><span class="material-symbols-outlined text-[16px]">notification_important</span><span class="font-label-sm text-label-sm font-semibold">3 Hospital Cashless Escalations Pending</span></div><div class="flex items-center gap-3 pl-2 border-l border-primary-container/80"><div class="flex items-center gap-2.5 bg-primary/40 px-3 py-1.5 rounded-lg"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-primary font-semibold leading-tight">Adv. Rajeshwar Sharma</span><div class="flex items-center gap-1.5"><span class="font-label-sm text-label-sm text-on-primary-container">(Managing Counsel &amp; Admin)</span><span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold uppercase tracking-wider">Super Admin</span></div></div></div><button class="p-2 text-on-primary-container hover:text-on-primary hover:bg-primary/50 rounded-lg transition-colors flex items-center" title="Secure Logout" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-64px)]"><div class="flex flex-col w-full">
+<!-- Top Navigation Active Route Script Fixation (Ensures App Shell matches view state) -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll('header nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'all-claims-register') {
+          link.className = "px-3.5 py-2 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary font-bold shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-all";
+        } else {
+          link.className = "px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-primary-container hover:text-on-primary hover:bg-primary-container/80 transition-all";
+        }
+      });
+    });
+  </script>
+<!-- Content Container with 12-Column Grid Rhythm -->
+<div class="w-full max-w-[1400px] mx-auto px-space-md sm:px-space-lg xl:px-space-xl py-space-lg space-y-space-lg">
+<!-- Executive Docket Header & Operational Command Bar -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-xs">
+<div class="space-y-1.5 max-w-3xl">
+<!-- Judicial Chambers Breadcrumbs -->
+<nav class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="hover:text-primary transition-colors cursor-pointer">Chambers Admin</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Dispute Redressal</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="text-secondary font-bold">All Claims Register &amp; Statutory Master Docket</span>
+</nav>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">
+          All Claims Register &amp; Statutory Master Docket
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Comprehensive administrative registry of all 148 registered insurance disputes, forensic audit statuses, insurer GRO clocks, and Insurance Ombudsman dockets under chambers custody.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-colors shadow-sm font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Complete Docket</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync_saved_locally</span>
+<span>Batch Regulatory Sync</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container transition-colors shadow-md hover:shadow-lg font-label-md text-label-md font-bold tracking-wide" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Inscribe New Claim Dossier</span>
+</button>
+</div>
+</div>
+<!-- Summary Metric Counters (High Contrast Institutional Trust Bento) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Metric 1: Active Dockets -->
+<div class="bg-surface-container-lowest rounded-xl p- space-md p-5 shadow-[0_4px_20px_-2px_rgba(16,38,63,0.06)] relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Total Active Dockets</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">folder_supervised</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">148</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Claims</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md font-semibold">
+<span>₹18.42 Cr</span>
+<span class="text-on-surface-variant font-normal text-[11px]">Contested</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/50 -mx-5 -mb-5 px-5 py-2 flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-on-surface-variant">100% Retainer Backed</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
+</div>
+</div>
+<!-- Metric 2: Insurer GRO Scrutiny -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_4px_20px_-2px_rgba(16,38,63,0.06)] relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Insurer GRO Scrutiny</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">hourglass_top</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">34</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Under Appeal</span>
+</div>
+<div class="flex items-center gap-1.5 text-error font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span>9</span>
+<span class="text-on-surface-variant font-normal text-[11px]">Near 15-day deadline</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/50 -mx-5 -mb-5 px-5 py-2 flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-on-surface-variant">IRDAI Reg 15(1) Clock</span>
+<span class="font-label-sm text-[11px] font-bold text-error">Critical Watch</span>
+</div>
+</div>
+<!-- Metric 3: Ombudsman Petitions -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_4px_20px_-2px_rgba(16,38,63,0.06)] relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Ombudsman Petitions</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">gavel</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Dockets</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-[11px]">
+<span>BLR • BOM • DEL • COK</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/50 -mx-5 -mb-5 px-5 py-2 flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Rule 17(1) Compliance</span>
+<span class="font-label-sm text-[11px] font-semibold text-primary">4 Benches</span>
+</div>
+</div>
+<!-- Metric 4: Adjudicated / Restituted -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_4px_20px_-2px_rgba(16,38,63,0.06)] relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Resolved / Restituted</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-secondary">64</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">91.4% Win Rate</span>
+</div>
+<div class="flex items-center gap-1.5 text-primary font-label-md text-label-md font-semibold">
+<span>₹12.65 Cr</span>
+<span class="text-on-surface-variant font-normal text-[11px]">Restituted (YTD)</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container-low/50 -mx-5 -mb-5 px-5 py-2 flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Chambers Fee Realized</span>
+<span class="font-label-sm text-[11px] font-bold text-secondary">₹1.26 Cr</span>
+</div>
+</div>
+<!-- Metric 5: Hospital Emergency Holds -->
+<div class="bg-error-container/40 rounded-xl p-5 shadow-[0_4px_20px_-2px_rgba(186,26,26,0.08)] relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between pb-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-error-container font-bold">Hospital Cashless Holds</span>
+<span class="material-symbols-outlined text-error text-[20px] animate-pulse">emergency</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-error-container">3</span>
+<span class="font-label-sm text-label-sm font-semibold text-error">Critical Holds</span>
+</div>
+<div class="flex items-center gap-1 text-on-error-container font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>&lt; 2hr Discharge SLA</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-error-container/70 -mx-5 -mb-5 px-5 py-2 flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-on-error-container font-semibold">Live Triage Dispatch</span>
+<span class="font-label-sm text-[11px] font-extrabold text-error">IMMEDIATE</span>
+</div>
+</div>
+</div>
+<!-- Advanced Multi-Parameter Filter & Control Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(16,38,63,0.04)] space-y-space-md">
+<!-- Search & Fast Selector Row -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex-1"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">search</span><input id="docket-search-input" class="w-full pl-10 pr-24 py-2.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline text-body-md font-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/30 shadow-sm transition-all" placeholder="Search by Case ID (CS-CLM-...), Policyholder, Policy #, Insurer, or Advocate..." type="text" value="CS-CLM-2025" autocomplete="off" onfocus="document.getElementById('search-autocomplete-dropdown').classList.remove('hidden')" oninput="(function(val){const dd=document.getElementById('search-autocomplete-dropdown');dd.classList.remove('hidden');const items=dd.querySelectorAll('.search-suggest-item');items.forEach(el=&gt;{const text=el.getAttribute('data-search-text')||'';if(!val||text.toLowerCase().includes(val.toLowerCase())){el.classList.remove('hidden');}else{el.classList.add('hidden');}});})(this.value)"><div class="absolute right-9 top-1/2 -translate-y-1/2 hidden sm:flex items-center gap-1 pointer-events-none"><kbd class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded border border-outline-variant/60 bg-surface-container-highest/50 text-[10px] font-mono font-semibold text-on-surface-variant shadow-sm"><span class="text-[11px] leading-none">⌘</span><span>K</span></kbd><span class="text-outline text-[10px]">or</span><kbd class="inline-flex items-center px-1.5 py-0.5 rounded border border-outline-variant/60 bg-surface-container-highest/50 text-[10px] font-mono font-semibold text-on-surface-variant shadow-sm">/</kbd></div><button id="clear-search-btn" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors" type="button" onclick="(function(){const inp=document.getElementById('docket-search-input');inp.value='';inp.focus();document.getElementById('search-autocomplete-dropdown').classList.remove('hidden');document.querySelectorAll('.search-suggest-item').forEach(el=&gt;el.classList.remove('hidden'));})()"><span class="material-symbols-outlined text-[16px]">cancel</span></button><div id="search-autocomplete-dropdown" class="absolute left-0 right-0 top-full mt-1.5 bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_-4px_rgba(16,38,63,0.18)] border border-surface-container-high/80 z-50 overflow-hidden divide-y divide-surface-container-low"><div class="px-3.5 py-2 bg-surface-container-low/60 flex items-center justify-between text-on-surface-variant font-label-sm text-[11px]"><div class="flex items-center gap-1.5 font-semibold text-primary"><span class="material-symbols-outlined text-[14px] text-secondary">travel_explore</span><span>Quick Redressal Matches</span></div><div class="flex items-center gap-2"><span class="text-[10px] text-outline font-normal">Press ESC to close</span><button type="button" onclick="document.getElementById('search-autocomplete-dropdown').classList.add('hidden')" class="hover:text-primary"><span class="material-symbols-outlined text-[14px]">close</span></button></div></div><div class="max-h-72 overflow-y-auto divide-y divide-surface-container-low/60"><div class="search-suggest-item px-3.5 py-2.5 hover:bg-surface-container-low/70 cursor-pointer transition-colors flex items-center justify-between gap-3 group" data-search-text="CS-CLM-2025-0419 Rajesh Kumar Sharma Star Health POL-ST-882104-BLR" onclick="(function(){document.getElementById('docket-search-input').value='CS-CLM-2025-0419';document.getElementById('search-autocomplete-dropdown').classList.add('hidden');})()"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-secondary-fixed/30 text-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[18px]">badge</span></div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-bold text-primary group-hover:text-secondary text-[13px]">Rajesh Kumar Sharma</span><span class="px-1.5 py-0.2 rounded bg-surface-container-high text-primary font-label-sm text-[9px] font-bold uppercase">GRO Stage 5</span></div><div class="flex items-center gap-2 text-[11px] text-on-surface-variant font-body-sm"><span class="font-mono font-semibold text-primary">CS-CLM-2025-0419</span><span>•</span><span class="text-outline">POL-ST-882104-BLR</span></div></div></div><div class="flex flex-col items-end shrink-0"><span class="font-bold text-primary text-[13px]">₹6,50,000</span><span class="text-on-surface-variant text-[10px]">Star Health &amp; Allied</span></div></div><div class="search-suggest-item px-3.5 py-2.5 hover:bg-error-container/20 cursor-pointer transition-colors flex items-center justify-between gap-3 group bg-error-container/10" data-search-text="CS-CLM-2025-0428 Smt. Sunita Deshmukh Care Health TPA-MED-99201-PUN" onclick="(function(){document.getElementById('docket-search-input').value='CS-CLM-2025-0428';document.getElementById('search-autocomplete-dropdown').classList.add('hidden');})()"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-error-container text-error flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[18px]">emergency</span></div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-bold text-error text-[13px]">Smt. Sunita Deshmukh</span><span class="px-1.5 py-0.2 rounded bg-error text-on-error font-label-sm text-[9px] font-bold uppercase animate-pulse">Urgent Discharge</span></div><div class="flex items-center gap-2 text-[11px] text-on-surface-variant font-body-sm"><span class="font-mono font-semibold text-error">CS-CLM-2025-0428</span><span>•</span><span class="text-outline">TPA-MED-99201-PUN</span></div></div></div><div class="flex flex-col items-end shrink-0"><span class="font-bold text-primary text-[13px]">₹3,20,000</span><span class="text-on-surface-variant text-[10px]">Care Health Insurance</span></div></div><div class="search-suggest-item px-3.5 py-2.5 hover:bg-surface-container-low/70 cursor-pointer transition-colors flex items-center justify-between gap-3 group" data-search-text="CS-CLM-2025-0382 Vikramaditya Sen HDFC Life KOL" onclick="(function(){document.getElementById('docket-search-input').value='CS-CLM-2025-0382';document.getElementById('search-autocomplete-dropdown').classList.add('hidden');})()"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[18px]">gavel</span></div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-bold text-primary group-hover:text-secondary text-[13px]">Vikramaditya Sen</span><span class="px-1.5 py-0.2 rounded bg-tertiary-fixed/60 text-on-tertiary-fixed font-label-sm text-[9px] font-bold uppercase">Ombudsman (KOL)</span></div><div class="flex items-center gap-2 text-[11px] text-on-surface-variant font-body-sm"><span class="font-mono font-semibold text-primary">CS-CLM-2025-0382</span><span>•</span><span class="text-outline">Click 2 Protect</span></div></div></div><div class="flex flex-col items-end shrink-0"><span class="font-bold text-primary text-[13px]">₹25,00,000</span><span class="text-on-surface-variant text-[10px]">HDFC Life Insurance</span></div></div><div class="search-suggest-item px-3.5 py-2.5 hover:bg-secondary-fixed/20 cursor-pointer transition-colors flex items-center justify-between gap-3 group bg-secondary-fixed/10" data-search-text="CS-CLM-2024-8192 Dr. Arvind Patel HDFC ERGO POL-HD-4412-AHM" onclick="(function(){document.getElementById('docket-search-input').value='CS-CLM-2024-8192';document.getElementById('search-autocomplete-dropdown').classList.add('hidden');})()"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[18px]">task_alt</span></div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-bold text-primary group-hover:text-secondary text-[13px]">Dr. Arvind Patel</span><span class="px-1.5 py-0.2 rounded bg-secondary text-on-secondary font-label-sm text-[9px] font-bold uppercase">Restituted</span></div><div class="flex items-center gap-2 text-[11px] text-on-surface-variant font-body-sm"><span class="font-mono font-semibold text-secondary">CS-CLM-2024-8192</span><span>•</span><span class="text-outline">POL-HD-4412-AHM</span></div></div></div><div class="flex flex-col items-end shrink-0"><span class="font-bold text-secondary text-[13px]">₹1,12,500</span><span class="text-on-surface-variant text-[10px]">HDFC ERGO General</span></div></div></div><div class="px-3.5 py-2 bg-surface-container-low/50 flex items-center justify-between text-[11px] text-on-surface-variant"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-outline">history</span><span>Recent Search: <strong class="text-primary font-semibold">CS-CLM-2025</strong></span></div><button type="button" onclick="document.getElementById('search-autocomplete-dropdown').classList.add('hidden')" class="font-semibold text-secondary hover:underline">Dismiss Overlay</button></div></div><script>(function(){document.addEventListener('keydown',function(e){const inp=document.getElementById('docket-search-input');const dd=document.getElementById('search-autocomplete-dropdown');if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();if(inp){inp.focus();inp.select();}if(dd){dd.classList.remove('hidden');}}else if(e.key==='/'&&document.activeElement!==inp&&document.activeElement.tagName!=='INPUT'&&document.activeElement.tagName!=='TEXTAREA'&&document.activeElement.tagName!=='SELECT'){e.preventDefault();if(inp){inp.focus();inp.select();}if(dd){dd.classList.remove('hidden');}}else if(e.key==='Escape'){if(dd){dd.classList.add('hidden');}if(inp&&document.activeElement===inp){inp.blur();}}});})();</script></div>
+<!-- View Format Toggles -->
+<div class="flex items-center gap-1 p-1 bg-surface-container-low rounded-lg shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-DEFAULT bg-surface-container-lowest text-primary font-bold shadow-sm text-label-sm font-label-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">view_list</span>
+<span>Master Table</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-DEFAULT text-on-surface-variant hover:text-primary font-semibold text-label-sm font-label-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">view_kanban</span>
+<span>8-Stage Kanban</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-DEFAULT text-on-surface-variant hover:text-primary font-semibold text-label-sm font-label-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>Bench Jurisdiction</span>
+</button>
+</div>
+</div>
+<!-- Filter Controls Strip -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-sm pt-2">
+<!-- Insurance Category -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider">Insurance Category</label>
+<select class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest">
+<option>All Categories (148)</option>
+<option selected="">Health / Mediclaim (98)</option>
+<option>Life / Term Assured (32)</option>
+<option>Motor Own Damage (14)</option>
+<option>Commercial / Fire (4)</option>
+</select>
+</div>
+<!-- Statutory Stage (8 Stages) -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider">Statutory Stage</label>
+<select class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest">
+<option>All 8 Stages Active</option>
+<option>1. Submitted / Emergency Triage</option>
+<option>2. Initial Review &amp; Merit Audit</option>
+<option>3. Awaiting Client ICPs</option>
+<option>4. Chambers Mandate Accepted</option>
+<option>5. Insurer GRO Escalated</option>
+<option>6. Awaiting Insurer Response</option>
+<option>7. Ombudsman Hearing Filed</option>
+<option>8. Restituted &amp; Reconciled</option>
+</select>
+</div>
+<!-- Repudiation Grounds -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider">Repudiation Ground</label>
+<select class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest">
+<option>All Repudiation Grounds</option>
+<option>Sec 45 Non-Disclosure</option>
+<option>Pre-Existing Condition (PED)</option>
+<option>Arbitrary Deductions / Capping</option>
+<option>Hospital Cashless Denial</option>
+<option>Delay Beyond 30 Days</option>
+<option>Genetic / Experimental Bar</option>
+</select>
+</div>
+<!-- Assigned Custodian -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider">Assigned Counsel</label>
+<select class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest">
+<option>All Counsel &amp; Advocates</option>
+<option>Adv. Rajeshwar Sharma (Lead)</option>
+<option>Adv. Meera Nambiar</option>
+<option>Adv. Rohan Sen</option>
+<option>Paralegal Audit Desk</option>
+</select>
+</div>
+<!-- Timeframe / Quarter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] font-semibold text-on-surface-variant uppercase tracking-wider">Timeframe / Docket Year</label>
+<select class="w-full px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest">
+<option selected="">Current FY 24-25 (Q3 &amp; Q4)</option>
+<option>FY 23-24 Historical</option>
+<option>Last 30 Days Intake</option>
+<option>All Time Docket History</option>
+</select>
+</div>
+<!-- Reset / Filter Controls -->
+<div class="flex flex-col justify-end">
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Reset 2 Active Filters</span>
+</button>
+</div>
+</div>
+<!-- Batch Selection & Operational Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2 bg-surface-container-low/70 px-3 py-2 rounded-lg">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary cursor-pointer" type="checkbox">
+<span class="font-label-sm text-label-sm font-bold text-primary">148 Total Records Filtered</span>
+</div>
+<span class="text-outline text-xs">|</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">3 Records Selected for Chambers Action</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary hover:bg-surface-container font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">person_add</span>
+<span>Reassign Advocate</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary hover:bg-surface-container font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">forward_to_inbox</span>
+<span>Issue GRO Statutory Notice</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-error hover:bg-error-container/40 font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">archive</span>
+<span>Archive Inactive</span>
+</button>
+</div>
+</div>
+</div>
+<!-- High-Fidelity Data Table ("Master Dispute Docket") -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_-4px_rgba(16,38,63,0.07)] overflow-hidden">
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1240px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-4 w-10 text-center" scope="col">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary cursor-pointer" type="checkbox">
+</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Case ID &amp; Priority</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Policyholder / Complainant</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Insurer &amp; Product Type</th>
+<th class="py-3.5 px-4 font-semibold text-right" scope="col">Claim Quantum</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Grounds of Repudiation</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Statutory Stage &amp; Timer</th>
+<th class="py-3.5 px-4 font-semibold" scope="col">Assigned Counsel</th>
+<th class="py-3.5 px-4 text-center font-semibold" scope="col">Docket Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-body-md font-body-md">
+<!-- Row 1: Rajesh Kumar Sharma (GRO Stage 5) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-4 text-center align-top">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary cursor-pointer mt-1" type="checkbox">
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[15px] font-bold text-primary group-hover:text-secondary transition-colors">CS-CLM-2025-0419</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-[10px] font-bold tracking-wide uppercase">GRO ACTIVE</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px]">Doc v2.1</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-0.5">
+<div class="font-bold text-on-surface flex items-center gap-1.5">
+<span>Rajesh Kumar Sharma</span>
+<span class="material-symbols-outlined text-secondary text-[14px]" title="KYC &amp; Aadhaar Chambers Verified">verified</span>
+</div>
+<div class="text-on-surface-variant text-[12px] flex items-center gap-1 font-body-sm">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+<span>Bengaluru, Karnataka</span>
+</div>
+<div class="text-outline text-[11px] tracking-tight">POL-ST-882104-BLR</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary">Star Health &amp; Allied</div>
+<div class="text-on-surface-variant text-[12px] leading-snug">Family Health Optima</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-[10px]">Mediclaim Individual</span>
+</td>
+<td class="py-4 px-4 align-top text-right space-y-0.5">
+<div class="font-bold text-primary font-headline-sm text-[15px]">₹6,50,000</div>
+<div class="text-error text-[11px] font-semibold">Repudiated 100%</div>
+<div class="text-on-surface-variant text-[11px]">Paid: ₹0.00</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1 max-w-[210px]">
+<div class="font-semibold text-error text-[12px] flex items-start gap-1">
+<span class="material-symbols-outlined text-[14px] shrink-0 mt-0.5">error_outline</span>
+<span>Sec. 45 Allegation</span>
+</div>
+<p class="text-on-surface-variant text-[12px] line-clamp-2 leading-tight">
+                  Insurer claims suppression of Hypertension during policy inception (2021). Controverted via 4-yr continuous renewal ledger.
+                </p>
+</td>
+<td class="py-4 px-4 align-top space-y-1.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-label-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Stage 5: Insurer GRO
+                </span>
+<div class="flex items-center gap-1 text-[11px] font-bold text-error">
+<span class="material-symbols-outlined text-[14px]">alarm</span>
+<span>Day 11 / 15 (4 days left)</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 73.3%"></div>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary text-[13px]">Adv. Meera Nambiar</div>
+<div class="text-on-surface-variant text-[11px]">Direct Redressal Desk</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-container text-on-primary-fixed-variant font-label-sm text-[9px] uppercase font-bold">Bangalore Bar</span>
+</td>
+<td class="py-4 px-4 align-top text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-primary hover:text-secondary transition-colors" title="Open Forensic Dossier" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-primary hover:text-secondary transition-colors" title="Evidentiary Vault" type="button">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-primary hover:text-secondary transition-colors" title="Download Chambers Brief (.PDF)" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Smt. Sunita Deshmukh (Emergency Discharge Hold) -->
+<tr class="bg-error-container/10 hover:bg-error-container/20 transition-colors group">
+<td class="py-4 px-4 text-center align-top">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary cursor-pointer mt-1" type="checkbox">
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[15px] font-bold text-error">CS-CLM-2025-0428</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-[10px] font-bold tracking-wider animate-pulse flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">flash_on</span>
+                    URGENT DISCHARGE
+                  </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-0.5">
+<div class="font-bold text-on-surface flex items-center gap-1.5">
+<span>Smt. Sunita Deshmukh</span>
+</div>
+<div class="text-on-surface-variant text-[12px] flex items-center gap-1 font-body-sm">
+<span class="material-symbols-outlined text-[13px]">local_hospital</span>
+<span>Ruby Hall Clinic, Pune</span>
+</div>
+<div class="text-outline text-[11px]">TPA-MED-99201-PUN</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary">Care Health Insurance</div>
+<div class="text-on-surface-variant text-[12px] leading-snug">Care Heart Mediclaim</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-[10px]">Cardiac Critical</span>
+</td>
+<td class="py-4 px-4 align-top text-right space-y-0.5">
+<div class="font-bold text-primary font-headline-sm text-[15px]">₹3,20,000</div>
+<div class="text-error text-[11px] font-bold">Discharge Blocked</div>
+<div class="text-on-surface-variant text-[11px]">ICU/Angioplasty</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1 max-w-[210px]">
+<div class="font-semibold text-error text-[12px] flex items-start gap-1">
+<span class="material-symbols-outlined text-[14px] shrink-0 mt-0.5">block</span>
+<span>Cashless Withheld</span>
+</div>
+<p class="text-on-surface-variant text-[12px] line-clamp-2 leading-tight">
+                  TPA querying past ECG records despite complete pre-authorization approval on Day 1. Hospital holding patient hostage.
+                </p>
+</td>
+<td class="py-4 px-4 align-top space-y-1.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-surface animate-ping"></span>
+                  Stage 1: Submitted
+                </span>
+<div class="flex items-center gap-1 text-[11px] font-extrabold text-error">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>SLA Remaining: 42 mins</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-error h-1.5 rounded-full" style="width: 88%"></div>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary text-[13px]">Adv. Rajeshwar Sharma</div>
+<div class="text-on-surface-variant text-[11px]">Managing Counsel Desk</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[9px] uppercase font-bold">Emergency Triage</span>
+</td>
+<td class="py-4 px-4 align-top text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="px-2.5 py-1 rounded bg-error text-on-error hover:bg-on-error-container font-label-sm text-[11px] font-bold transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>Intervene</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Vikramaditya Sen (Ombudsman Hearing Stage 7) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-4 text-center align-top">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary cursor-pointer mt-1" type="checkbox">
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[15px] font-bold text-primary group-hover:text-secondary transition-colors">CS-CLM-2025-0382</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed/60 text-on-tertiary-fixed font-label-sm text-[10px] font-bold tracking-wide uppercase">PETITION FILED</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px]">Bench: KOL</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-0.5">
+<div class="font-bold text-on-surface flex items-center gap-1.5">
+<span>Vikramaditya Sen</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">verified</span>
+</div>
+<div class="text-on-surface-variant text-[12px] flex items-center gap-1 font-body-sm">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+<span>Salt Lake, Kolkata</span>
+</div>
+<div class="text-outline text-[11px]">NOMINEE CASE: SMT. ANANYA SEN</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary">HDFC Life Insurance</div>
+<div class="text-on-surface-variant text-[12px] leading-snug">Click 2 Protect 3D Plus</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-[10px]">Life / Term Assured</span>
+</td>
+<td class="py-4 px-4 align-top text-right space-y-0.5">
+<div class="font-bold text-primary font-headline-sm text-[15px]">₹25,00,000</div>
+<div class="text-error text-[11px] font-semibold">Repudiated 100%</div>
+<div class="text-on-surface-variant text-[11px]">Sum Assured Full</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1 max-w-[210px]">
+<div class="font-semibold text-on-surface text-[12px] flex items-start gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px] shrink-0 mt-0.5">verified_user</span>
+<span>Early Death Repudiation</span>
+</div>
+<p class="text-on-surface-variant text-[12px] line-clamp-2 leading-tight">
+                  Insurer repudiated death claim citing non-disclosure of mild fatty liver. Sec 45 statutory 3-year incontestability invoked.
+                </p>
+</td>
+<td class="py-4 px-4 align-top space-y-1.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Stage 7: Ombudsman Hearing
+                </span>
+<div class="flex items-center gap-1 text-[11px] font-bold text-primary">
+<span class="material-symbols-outlined text-[14px]">event</span>
+<span>Hearing: 08 Dec (Kolkata)</span>
+</div>
+<div class="text-on-surface-variant text-[10px]">Formal Written Brief Filed</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary text-[13px]">Adv. Rajeshwar Sharma</div>
+<div class="text-on-surface-variant text-[11px]">Managing Counsel Desk</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-container text-on-primary-fixed-variant font-label-sm text-[9px] uppercase font-bold">Ombudsman Counsel</span>
+</td>
+<td class="py-4 px-4 align-top text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-primary hover:text-secondary transition-colors" title="View Ombudsman Docket" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-primary hover:text-secondary transition-colors" title="Hearing Brief Download" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Dr. Arvind Patel (Resolved / Restituted Stage 8) -->
+<tr class="bg-secondary-fixed/10 hover:bg-secondary-fixed/20 transition-colors group">
+<td class="py-4 px-4 text-center align-top">
+<input class="w-4 h-4 rounded text-secondary accent-secondary cursor-pointer mt-1" type="checkbox">
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[15px] font-bold text-primary">CS-CLM-2024-8192</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-[10px] font-bold tracking-wide uppercase">RESTITUTED</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px]">Closed</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-0.5">
+<div class="font-bold text-on-surface flex items-center gap-1.5">
+<span>Dr. Arvind Patel</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">check_circle</span>
+</div>
+<div class="text-on-surface-variant text-[12px] flex items-center gap-1 font-body-sm">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+<span>Ahmedabad, Gujarat</span>
+</div>
+<div class="text-outline text-[11px]">POL-HD-4412-AHM</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary">HDFC ERGO General</div>
+<div class="text-on-surface-variant text-[12px] leading-snug">Optima Secure Health</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-[10px]">Surgical Restitution</span>
+</td>
+<td class="py-4 px-4 align-top text-right space-y-0.5">
+<div class="font-bold text-secondary font-headline-sm text-[15px]">₹1,12,500</div>
+<div class="text-secondary text-[11px] font-bold">+ 8% Statutory Interest</div>
+<div class="text-on-surface-variant text-[11px]">Claimed: ₹1,20,000</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1 max-w-[210px]">
+<div class="font-semibold text-secondary text-[12px] flex items-start gap-1">
+<span class="material-symbols-outlined text-[14px] shrink-0 mt-0.5">task_alt</span>
+<span>Repudiation Overturned</span>
+</div>
+<p class="text-on-surface-variant text-[12px] line-clamp-2 leading-tight">
+                  Hydrocelectomy day care surgery rejection successfully reversed before Ahmedabad Ombudsman bench. 100% recovery.
+                </p>
+</td>
+<td class="py-4 px-4 align-top space-y-1.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Stage 8: Resolved / Fee Cleared
+                </span>
+<div class="flex items-center gap-1 text-[11px] font-bold text-secondary">
+<span class="material-symbols-outlined text-[14px]">price_check</span>
+<span>Chambers Fee: ₹11,250 Recd</span>
+</div>
+<div class="text-on-surface-variant text-[10px]">Closed on 22 Jan 2025</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary text-[13px]">Adv. Meera Nambiar</div>
+<div class="text-on-surface-variant text-[11px]">Direct Redressal Desk</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-container text-on-primary-fixed-variant font-label-sm text-[9px] uppercase font-bold">Completed</span>
+</td>
+<td class="py-4 px-4 align-top text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-secondary transition-colors" title="Download Final Ombudsman Award" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-primary transition-colors" title="Archived Settlement Record" type="button">
+<span class="material-symbols-outlined text-[18px]">inventory</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Priya Sundaram (Stage 3 Awaiting ICPs) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-4 text-center align-top">
+<input class="w-4 h-4 rounded text-secondary accent-secondary cursor-pointer mt-1" type="checkbox">
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[15px] font-bold text-primary group-hover:text-secondary transition-colors">CS-CLM-2025-0511</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px] font-semibold uppercase">DEFICIENCY</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-0.5">
+<div class="font-bold text-on-surface">Priya Sundaram</div>
+<div class="text-on-surface-variant text-[12px] flex items-center gap-1 font-body-sm">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+<span>Adyar, Chennai</span>
+</div>
+<div class="text-outline text-[11px]">POL-NB-10928-CHN</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary">Niva Bupa Health</div>
+<div class="text-on-surface-variant text-[12px] leading-snug">ReAssure 2.0 Bronze</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-[10px]">Health Indemnity</span>
+</td>
+<td class="py-4 px-4 align-top text-right space-y-0.5">
+<div class="font-bold text-primary font-headline-sm text-[15px]">₹2,10,000</div>
+<div class="text-on-surface-variant text-[11px]">Total Claim: ₹4,80,000</div>
+<div class="text-secondary text-[11px]">Paid: ₹2,70,000</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1 max-w-[210px]">
+<div class="font-semibold text-primary text-[12px] flex items-start gap-1">
+<span class="material-symbols-outlined text-outline text-[14px] shrink-0 mt-0.5">tune</span>
+<span>Room Rent 45% Cut</span>
+</div>
+<p class="text-on-surface-variant text-[12px] line-clamp-2 leading-tight">
+                  Proportionate deduction misapplied across entire billing including surgical surgeon fees. Contradicts Policy Wording Cl. 3.2.
+                </p>
+</td>
+<td class="py-4 px-4 align-top space-y-1.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Stage 3: Awaiting Client ICPs
+                </span>
+<div class="flex items-center gap-1 text-[11px] font-semibold text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">pending_actions</span>
+<span>Indoor Case Papers Pending</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-outline h-1.5 rounded-full" style="width: 35%"></div>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary text-[13px]">Adv. Rohan Sen</div>
+<div class="text-on-surface-variant text-[11px]">Appellate Desk</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-container text-on-primary-fixed-variant font-label-sm text-[9px] uppercase font-bold">Junior Counsel</span>
+</td>
+<td class="py-4 px-4 align-top text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-primary transition-colors" title="Request Records Link" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-primary transition-colors" title="View Audit Trail" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Meenakshi Sundaram (Stage 6 Awaiting Insurer Response) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-4 text-center align-top">
+<input class="w-4 h-4 rounded text-secondary accent-secondary cursor-pointer mt-1" type="checkbox">
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[15px] font-bold text-primary group-hover:text-secondary transition-colors">CS-CLM-2024-7710</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-[10px] font-semibold uppercase">ESCALATED</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-0.5">
+<div class="font-bold text-on-surface">Meenakshi Sundaram</div>
+<div class="text-on-surface-variant text-[12px] flex items-center gap-1 font-body-sm">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+<span>Coimbatore, TN</span>
+</div>
+<div class="text-outline text-[11px]">POL-MX-9941-CBR</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary">Max Life Insurance</div>
+<div class="text-on-surface-variant text-[12px] leading-snug">Smart Term Plus CI</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-[10px]">Critical Illness Rider</span>
+</td>
+<td class="py-4 px-4 align-top text-right space-y-0.5">
+<div class="font-bold text-primary font-headline-sm text-[15px]">₹22,50,000</div>
+<div class="text-error text-[11px] font-semibold">Repudiated CI Rider</div>
+<div class="text-on-surface-variant text-[11px]">Base Term: Intact</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1 max-w-[210px]">
+<div class="font-semibold text-error text-[12px] flex items-start gap-1">
+<span class="material-symbols-outlined text-[14px] shrink-0 mt-0.5">report_problem</span>
+<span>CI Diagnostic Definition</span>
+</div>
+<p class="text-on-surface-variant text-[12px] line-clamp-2 leading-tight">
+                  Insurer claims stroke did not result in permanent neurological deficit of 90 days. Neuro audit report submitted.
+                </p>
+</td>
+<td class="py-4 px-4 align-top space-y-1.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Stage 6: Awaiting Insurer
+                </span>
+<div class="flex items-center gap-1 text-[11px] font-semibold text-primary">
+<span class="material-symbols-outlined text-[14px]">update</span>
+<span>Day 7 / 15 under IRDAI notice</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 46%"></div>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary text-[13px]">Adv. Meera Nambiar</div>
+<div class="text-on-surface-variant text-[11px]">Direct Redressal Desk</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-container text-on-primary-fixed-variant font-label-sm text-[9px] uppercase font-bold">Counsel</span>
+</td>
+<td class="py-4 px-4 align-top text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-primary hover:text-secondary transition-colors" title="View Legal Dossier" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-primary transition-colors" title="Generate Legal Reminder" type="button">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Harpreet Singh (Stage 4 Accepted Mandate) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-4 text-center align-top">
+<input class="w-4 h-4 rounded text-secondary accent-secondary cursor-pointer mt-1" type="checkbox">
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[15px] font-bold text-primary group-hover:text-secondary transition-colors">CS-CLM-2025-0604</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] font-bold tracking-wide uppercase">RETAINED</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-0.5">
+<div class="font-bold text-on-surface">Harpreet Singh</div>
+<div class="text-on-surface-variant text-[12px] flex items-center gap-1 font-body-sm">
+<span class="material-symbols-outlined text-[13px]">location_on</span>
+<span>Sector 35, Chandigarh</span>
+</div>
+<div class="text-outline text-[11px]">POL-TA-5100-CHD</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary">Tata AIG General</div>
+<div class="text-on-surface-variant text-[12px] leading-snug">Medicare Premier</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-[10px]">Comprehensive</span>
+</td>
+<td class="py-4 px-4 align-top text-right space-y-0.5">
+<div class="font-bold text-primary font-headline-sm text-[15px]">₹8,40,000</div>
+<div class="text-error text-[11px] font-semibold">Repudiated 100%</div>
+<div class="text-on-surface-variant text-[11px]">Post-Op Gene Therapy</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1 max-w-[210px]">
+<div class="font-semibold text-error text-[12px] flex items-start gap-1">
+<span class="material-symbols-outlined text-[14px] shrink-0 mt-0.5">gavel</span>
+<span>Genetic Exclusion Clause</span>
+</div>
+<p class="text-on-surface-variant text-[12px] line-clamp-2 leading-tight">
+                  Insurer relied on outlawed genetic discrimination clause declared unconstitutional by Delhi High Court in 2018.
+                </p>
+</td>
+<td class="py-4 px-4 align-top space-y-1.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Stage 4: Mandate Accepted
+                </span>
+<div class="flex items-center gap-1 text-[11px] font-semibold text-primary">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<span>Drafting Formal Notice (GRO)</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 50%"></div>
+</div>
+</td>
+<td class="py-4 px-4 align-top space-y-1">
+<div class="font-semibold text-primary text-[13px]">Adv. Rohan Sen</div>
+<div class="text-on-surface-variant text-[11px]">Appellate Desk</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-container text-on-primary-fixed-variant font-label-sm text-[9px] uppercase font-bold">Punjab Bar</span>
+</td>
+<td class="py-4 px-4 align-top text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-primary hover:text-secondary transition-colors" title="Review Notice Draft" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-primary transition-colors" title="Client Consent Signature" type="button">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination and Table Footer Control -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-4 text-on-surface-variant font-body-sm text-body-sm">
+<span>Showing <strong class="text-primary font-bold">1 to 7</strong> of <strong class="text-primary font-bold">148</strong> Active Dispute Dockets</span>
+<div class="flex items-center gap-2">
+<span class="text-on-surface-variant">Rows per page:</span>
+<select class="px-2 py-1 rounded bg-surface-container-lowest text-primary font-semibold text-label-sm font-label-sm focus:outline-none shadow-sm">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+</div>
+</div>
+<!-- Pagination Controls -->
+<div class="flex items-center gap-1.5">
+<button class="p-1.5 rounded bg-surface-container-lowest text-on-surface-variant hover:text-primary disabled:opacity-40 transition-colors shadow-sm" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary text-on-primary font-bold text-label-sm font-label-sm shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container text-label-sm font-label-sm transition-colors shadow-sm" type="button">2</button>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container text-label-sm font-label-sm transition-colors shadow-sm" type="button">3</button>
+<span class="px-1 text-outline font-label-sm">...</span>
+<button class="w-8 h-8 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container text-label-sm font-label-sm transition-colors shadow-sm" type="button">22</button>
+<button class="p-1.5 rounded bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Statutory Redressal Timelines & Institutional Compliance Notice -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px] mt-0.5">policy</span>
+<div class="space-y-0.5">
+<h4 class="font-headline-sm text-[14px] text-primary">IRDAI (Protection of Policyholders' Interests) Regulations, 2017 &amp; Ombudsman Rules 2017/2023</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Insurer Grievance Redressal Officers (GRO) are mandated by law to adjudicate representations within 15 consecutive days. Failure automatically perfects client locus standi before the Insurance Ombudsman under Rule 13(1)(b).
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm font-bold bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Bima Bharosa Integrated</span>
+</div>
+<div class="text-on-surface-variant font-label-sm text-[11px]">
+          Chambers Ledger: <span class="text-primary font-semibold">Active Sync (v4.2)</span>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-primary-container text-on-primary-container shadow-[0_-1px_10px_rgba(16,38,63,0.1)]"><div class="w-full px-space-lg xl:px-space-xl py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs text-center sm:text-left"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed text-[16px]">lock</span><span class="font-label-sm text-label-sm text-on-primary tracking-wide">IRDAI Compliance &amp; ISO 27001 Cryptographic Session Ledger</span><span class="hidden md:inline text-on-primary-container/40">|</span><span class="hidden md:inline font-label-sm text-label-sm text-on-primary-container">Restricted Chambers Intranet</span></div><div class="flex items-center gap-4 font-label-sm text-label-sm text-on-primary-container"><span>Node ID: CS-DEL-ADMN-01</span><span>Latency: 28ms</span><span>© 2025 ClaimSathi Legal LLP</span></div></div></footer>
+
+</body></html>
