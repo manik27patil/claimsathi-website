@@ -1,6 +1,6 @@
 import { supabase } from "../supabase";
-import { signUp, signIn, signOut, resetPassword, updatePassword, initAuth, getAuthState, subscribeAuth, Profile } from "../auth";
+import { signInWithGoogle, signOut, initAuth, subscribeAuth, getAuthState, updateProfile, isProfileComplete } from "../auth";
 
 // Export for use by page modules
-export { supabase, signUp, signIn, signOut, resetPassword, updatePassword, initAuth, getAuthState, subscribeAuth };
+export { supabase, signInWithGoogle, signOut, initAuth, subscribeAuth, getAuthState, updateProfile, isProfileComplete };
 export type { Profile };

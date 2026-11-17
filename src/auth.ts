@@ -37,6 +37,11 @@ async function fetchProfile(userId: string): Promise<Profile | null> {
   return data as Profile | null;
 }
 
+export function isProfileComplete(profile: Profile | null): boolean {
+  if (!profile) return false;
+  return Boolean(profile.mobile_number && profile.country);
+}
+
 export async function initAuth() {
   const { data } = await supabase.auth.getSession();
   if (data.session?.user) {
@@ -53,57 +58,57 @@ export async function initAuth() {
         return;
       }
       if (event === "SIGNED_IN" || event === "TOKEN_REFRESHED") {
-        const profile = await fetchProfile(session.user.id);
-        setState({ user: { id: session.user.id, email: session.user.email || "" }, profile, loading: false });
+        const user = session.user;
+        let profile = await fetchProfile(user.id);
+
+        // First-time Google sign-in: auto-create profile from Google metadata
+        if (!profile) {
+          const googleName = user.user_metadata?.full_name || user.user_metadata?.name || user.email?.split("@")[0] || "Policyholder";
+          const { error: insertError } = await supabase.from("profiles").insert({
+            id: user.id,
+            full_name: googleName,
+            email: user.email || "",
+            mobile_number: null,
+            country: null,
+          });
+          if (!insertError) {
+            profile = await fetchProfile(user.id);
+          }
+        }
+
+        setState({ user: { id: user.id, email: user.email || "" }, profile, loading: false });
       }
     })();
   });
 }
 
-export async function signUp(fullName: string, email: string, mobile: string, password: string): Promise<{ error: string | null }> {
-  const { data, error } = await supabase.auth.signUp({
-    email,
-    password,
-    options: { data: { full_name: fullName, mobile_number: mobile } },
+export async function signInWithGoogle(): Promise<{ error: string | null }> {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: window.location.origin + "/auth/dashboard.html",
+    },
   });
   if (error) return { error: error.message };
-  if (!data.user) return { error: "Registration failed. Please try again." };
-
-  // Create profile record
-  const { error: profileError } = await supabase.from("profiles").insert({
-    id: data.user.id,
-    full_name: fullName,
-    mobile_number: mobile,
-    email: email,
-  });
-  if (profileError) {
-    // Profile creation failed but auth user exists — not critical, can be retried
-    console.warn("Profile creation failed:", profileError.message);
-  }
-
   return { error: null };
 }
 
-export async function signIn(email: string, password: string): Promise<{ error: string | null }> {
-  const { error } = await supabase.auth.signInWithPassword({ email, password });
+export async function updateProfile(updates: { mobile_number?: string; country?: string }): Promise<{ error: string | null }> {
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return { error: "Not authenticated." };
+
+  const { error } = await supabase
+    .from("profiles")
+    .update({ ...updates, updated_at: new Date().toISOString() })
+    .eq("id", user.id);
+
   if (error) return { error: error.message };
+
+  const profile = await fetchProfile(user.id);
+  setState({ user: { id: user.id, email: user.email || "" }, profile, loading: false });
   return { error: null };
 }
 
 export async function signOut(): Promise<void> {
   await supabase.auth.signOut();
-}
-
-export async function resetPassword(email: string): Promise<{ error: string | null }> {
-  const { error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: window.location.origin + "/#/reset-password",
-  });
-  if (error) return { error: error.message };
-  return { error: null };
-}
-
-export async function updatePassword(newPassword: string): Promise<{ error: string | null }> {
-  const { error } = await supabase.auth.updateUser({ password: newPassword });
-  if (error) return { error: error.message };
-  return { error: null };
 }

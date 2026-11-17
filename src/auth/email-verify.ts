@@ -1,9 +1,2 @@
-document.getElementById("login-link")?.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href = "/auth/login.html";
-});
-
-document.getElementById("back-home")?.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href = "/";
-});
+// Email verification is handled by Google OAuth — redirect to login
+window.location.href = "/auth/login.html";

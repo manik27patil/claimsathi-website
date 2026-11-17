@@ -150,9 +150,10 @@ const authRedirects: Record<string, string> = {
   "auth-login": "/auth/login.html",
   "auth-register": "/auth/register.html",
   "auth-dashboard": "/auth/dashboard.html",
-  "auth-forgot": "/auth/forgot-password.html",
-  "auth-reset": "/auth/reset-password.html",
-  "auth-verify": "/auth/email-verify.html",
+  "auth-profile-completion": "/auth/profile-completion.html",
+  "auth-forgot": "/auth/login.html",
+  "auth-reset": "/auth/login.html",
+  "auth-verify": "/auth/login.html",
 };
 
 // Maps data-path values from original design comps to auth page routes

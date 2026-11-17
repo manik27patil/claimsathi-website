@@ -1,4 +1,4 @@
-import { signOut, initAuth, subscribeAuth } from "../auth";
+import { signOut, initAuth, subscribeAuth, isProfileComplete } from "../auth";
 
 initAuth();
 
@@ -10,6 +10,11 @@ subscribeAuth((state) => {
 
   if (!state.user) {
     window.location.href = "/auth/login.html";
+    return;
+  }
+
+  if (!isProfileComplete(state.profile)) {
+    window.location.href = "/auth/profile-completion.html";
     return;
   }
 

@@ -12,6 +12,7 @@ export default defineConfig({
         login: "auth/login.html",
         register: "auth/register.html",
         dashboard: "auth/dashboard.html",
+        "profile-completion": "auth/profile-completion.html",
         "forgot-password": "auth/forgot-password.html",
         "reset-password": "auth/reset-password.html",
         "email-verify": "auth/email-verify.html",

@@ -1,6 +1,5 @@
-import { supabase } from "../supabase";
-import { signIn, initAuth, subscribeAuth } from "../auth";
-import { showError, hideError, setLoading, validateEmail } from "./ui";
+import { signInWithGoogle, initAuth, subscribeAuth } from "../auth";
+import { showError, hideError, setLoading } from "./ui";
 
 initAuth();
 
@@ -10,42 +9,16 @@ subscribeAuth((state) => {
   }
 });
 
-document.getElementById("login-form")?.addEventListener("submit", async (e) => {
-  e.preventDefault();
+document.getElementById("google-login-btn")?.addEventListener("click", async () => {
   hideError("login-error");
+  setLoading("google-login-btn", true, "Redirecting to Google...");
 
-  const email = (document.getElementById("email") as HTMLInputElement).value.trim();
-  const password = (document.getElementById("password") as HTMLInputElement).value;
-
-  if (!validateEmail(email)) {
-    showError("login-error", "Please enter a valid email address.");
-    return;
-  }
-  if (!password) {
-    showError("login-error", "Please enter your password.");
-    return;
-  }
-
-  setLoading("login-btn", true, "Signing in...");
-
-  const { error } = await signIn(email, password);
+  const { error } = await signInWithGoogle();
 
   if (error) {
-    setLoading("login-btn", false);
-    if (error.includes("Invalid login credentials")) {
-      showError("login-error", "Incorrect email or password. Please try again.");
-    } else {
-      showError("login-error", error);
-    }
-    return;
+    setLoading("google-login-btn", false);
+    showError("login-error", error);
   }
-
-  // Redirect happens via auth state listener
-});
-
-document.getElementById("forgot-link")?.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href = "/auth/forgot-password.html";
 });
 
 document.getElementById("register-link")?.addEventListener("click", (e) => {
