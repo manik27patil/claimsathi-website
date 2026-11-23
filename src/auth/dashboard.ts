@@ -24,6 +24,7 @@ subscribeAuth((state) => {
   const name = state.profile?.full_name || state.user.email?.split("@")[0] || "Policyholder";
   const email = state.user.email || "—";
   const mobile = state.profile?.mobile_number || "—";
+  const countryCode = state.profile?.country_code || "";
 
   const userNameEl = document.getElementById("user-name");
   const userEmailEl = document.getElementById("user-email");
@@ -37,7 +38,7 @@ subscribeAuth((state) => {
   if (welcomeNameEl) welcomeNameEl.textContent = name;
   if (profileNameEl) profileNameEl.textContent = name;
   if (profileEmailEl) profileEmailEl.textContent = email;
-  if (profileMobileEl) profileMobileEl.textContent = mobile;
+  if (profileMobileEl) profileMobileEl.textContent = (countryCode ? countryCode + " " : "") + mobile;
 });
 
 document.getElementById("logout-btn")?.addEventListener("click", async () => {

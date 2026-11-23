@@ -19,6 +19,7 @@ export interface Profile {
   id: string;
   full_name: string;
   mobile_number: string | null;
+  country_code: string | null;
   email: string;
   country: string | null;
   created_at: string;

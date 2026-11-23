@@ -39,7 +39,7 @@ async function fetchProfile(userId: string): Promise<Profile | null> {
 
 export function isProfileComplete(profile: Profile | null): boolean {
   if (!profile) return false;
-  return Boolean(profile.mobile_number && profile.country);
+  return Boolean(profile.mobile_number && profile.country_code && profile.country);
 }
 
 export async function initAuth() {
@@ -93,7 +93,7 @@ export async function signInWithGoogle(): Promise<{ error: string | null }> {
   return { error: null };
 }
 
-export async function updateProfile(updates: { mobile_number?: string; country?: string }): Promise<{ error: string | null }> {
+export async function updateProfile(updates: { mobile_number?: string; country_code?: string; country?: string }): Promise<{ error: string | null }> {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { error: "Not authenticated." };
 

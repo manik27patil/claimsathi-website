@@ -33,8 +33,13 @@ document.getElementById("profile-form")?.addEventListener("submit", async (e) =>
   hideError("profile-error");
 
   const mobile = (document.getElementById("mobile") as HTMLInputElement).value.trim();
+  const countryCode = (document.getElementById("country-code") as HTMLSelectElement).value;
   const country = (document.getElementById("country") as HTMLSelectElement).value;
 
+  if (!countryCode) {
+    showError("profile-error", "Please select your country code.");
+    return;
+  }
   if (!validateMobile(mobile)) {
     showError("profile-error", "Please enter a valid mobile number (10-13 digits).");
     return;
@@ -46,7 +51,7 @@ document.getElementById("profile-form")?.addEventListener("submit", async (e) =>
 
   setLoading("profile-btn", true, "Saving...");
 
-  const { error } = await updateProfile({ mobile_number: mobile, country });
+  const { error } = await updateProfile({ mobile_number: mobile, country_code: countryCode, country });
 
   if (error) {
     setLoading("profile-btn", false);
